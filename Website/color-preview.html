@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chai Menachem — Aperçu couleurs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Frank+Ruhl+Libre:wght@400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden}
@@ -593,38 +593,54 @@ body.opt-prune {
 
     <!-- CENTER: Logo + Bem-vindos -->
     <div class="center-pair">
-      <!-- LOGO SVG — vectoriel parfait, animation draw-in -->
+      <!-- LOGO SVG — vectoriel fidèle à l'original avec animation draw-in -->
       <div class="logo-area">
-        <svg class="logo-svg" viewBox="0 0 345 182" xmlns="http://www.w3.org/2000/svg">
-          <!-- Flamme qui se dessine -->
-          <g transform="translate(265, 44)">
-            <path class="flame-stroke"
-              d="M0,-30 C14,-13 16,7 8,20 C4,27 0,32 0,32 C0,32 -4,27 -8,20 C-16,7 -14,-13 0,-30 Z"/>
+        <svg class="logo-svg" viewBox="0 0 320 178" xmlns="http://www.w3.org/2000/svg">
+
+          <!-- ── FLAMME avec חי à l'intérieur ── -->
+          <g transform="translate(213, 40)">
+            <!-- Contour qui se dessine (stroke animé) -->
+            <path class="flame-stroke" pathLength="200"
+              d="M2,-38 C10,-22 18,-6 15,8 C12,18 6,28 0,32 C-6,28 -13,18 -16,6 C-19,-8 -14,-24 2,-38 Z"/>
+            <!-- Remplissage or qui apparaît après le tracé -->
             <path class="flame-fill"
-              d="M0,-30 C14,-13 16,7 8,20 C4,27 0,32 0,32 C0,32 -4,27 -8,20 C-16,7 -14,-13 0,-30 Z"/>
+              d="M2,-38 C10,-22 18,-6 15,8 C12,18 6,28 0,32 C-6,28 -13,18 -16,6 C-19,-8 -14,-24 2,-38 Z"/>
+            <!-- Ovale intérieur sombre (contre-forme) -->
+            <ellipse cx="1" cy="3" rx="8" ry="15"
+              style="fill:rgba(30,16,4,0.55);opacity:0;animation:flameFillIn .6s ease 1.8s both"/>
+            <!-- Lettres hébraïques חי -->
+            <text font-family="Frank Ruhl Libre, serif" font-size="13" font-weight="400"
+              text-anchor="middle" x="1" y="11"
+              style="fill:rgba(255,248,225,0.82);opacity:0;animation:flameFillIn .6s ease 2.1s both">חי</text>
           </g>
-          <!-- Chai -->
+
+          <!-- ── Chai ── -->
           <g class="logo-chai-g">
-            <text x="4" y="90"
+            <text x="202" y="88"
               font-family="Cormorant Garamond, serif"
-              font-size="96" font-weight="300"
+              font-size="62" font-weight="600"
+              text-anchor="end"
               fill="#C4975A">Chai</text>
           </g>
-          <!-- Menachem -->
+
+          <!-- ── Menachem ── -->
           <g class="logo-menachem-g">
-            <text x="4" y="158"
+            <text x="2" y="148"
               font-family="Cormorant Garamond, serif"
-              font-size="66" font-weight="300"
+              font-size="62" font-weight="600"
               fill="#C4975A">Menachem</text>
           </g>
-          <!-- CHABAD CENTER -->
+
+          <!-- ── CHABAD CENTER ── -->
           <g class="logo-chabad-g">
-            <text x="5" y="177"
+            <text x="160" y="167"
               font-family="DM Sans, sans-serif"
               font-size="10" font-weight="300"
               letter-spacing="5"
-              fill="#C4975A" opacity="0.55">CHABAD  CENTER</text>
+              text-anchor="middle"
+              fill="#C4975A" opacity="0.55">CHABAD CENTER</text>
           </g>
+
         </svg>
       </div>
 
