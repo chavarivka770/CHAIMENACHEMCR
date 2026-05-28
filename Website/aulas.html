@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Aulas — Chai Menachem</title>
+<link rel="icon" type="image/png" href="logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Frank+Ruhl+Libre:wght@400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+
+.page{max-width:900px;margin:0 auto;padding:5rem 2.5rem 6rem}
+
+.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.eyebrow-line{display:block;width:32px;height:1px;background:rgba(201,168,76,.5)}
+.eyebrow-text{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,168,76,.7)}
+
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;line-height:1.15;color:#E8DFD0;margin-bottom:.5rem}
+.sec-title em{font-style:italic;color:#C4975A}
+.sec-body{font-size:.92rem;line-height:1.8;color:rgba(232,223,208,.6);margin-bottom:2.5rem}
+
+/* TABELA */
+.aulas-table{margin-top:2.5rem;border:1px solid rgba(255,255,255,.08)}
+.aula-row{display:grid;grid-template-columns:70px 60px 1fr 1fr 120px;align-items:center;gap:1rem;padding:.9rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.06);transition:background .2s}
+.aula-row:last-child{border-bottom:none}
+.aula-row:hover{background:rgba(201,168,76,.05)}
+.aula-row--sh{background:rgba(201,168,76,.04)}
+.aula-row--sh:hover{background:rgba(201,168,76,.09)}
+.aula-dia{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#C4975A;font-weight:500}
+.aula-hora{font-size:.78rem;color:rgba(232,223,208,.5);letter-spacing:.05em}
+.aula-nome{font-size:.85rem;color:#E8DFD0;line-height:1.4}
+.aula-prof{font-size:.75rem;color:rgba(232,223,208,.45);font-style:italic}
+.aula-pub{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;text-align:right;color:rgba(232,223,208,.35)}
+.aula-pub--h{color:rgba(100,160,220,.7)}
+.aula-pub--m{color:rgba(220,140,160,.7)}
+
+@media(max-width:680px){
+  .aula-row{grid-template-columns:55px 50px 1fr;gap:.5rem}
+  .aula-prof,.aula-pub{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="eyebrow">
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-text">Conhecimento</span>
+  </div>
+  <h2 class="sec-title">Programação<br><em>de Aulas</em></h2>
+  <p class="sec-body">Aulas semanais para todos os níveis, presenciais e abertas à comunidade.</p>
+
+  <div class="aulas-table">
+    <div class="aula-row"><span class="aula-dia">Dom</span><span class="aula-hora">8h45</span><span class="aula-nome">Fatos Fundamentais do Judaísmo</span><span class="aula-prof">Rabino Mendi Simonowits</span><span class="aula-pub">Homens e Mulheres</span></div>
+    <div class="aula-row"><span class="aula-dia">Seg</span><span class="aula-hora">18h30</span><span class="aula-nome">Conceitos Chassídicos Profundos e Místicos</span><span class="aula-prof">Rabino Belinow</span><span class="aula-pub aula-pub--h">Homens</span></div>
+    <div class="aula-row"><span class="aula-dia">Ter</span><span class="aula-hora">19h30</span><span class="aula-nome">Aula de Talmud</span><span class="aula-prof">Joe Faintuch</span><span class="aula-pub aula-pub--h">Homens</span></div>
+    <div class="aula-row"><span class="aula-dia">Ter</span><span class="aula-hora">20h</span><span class="aula-nome">O Lado Místico e Prático das Festas Judaicas</span><span class="aula-prof">Chanie Belinow</span><span class="aula-pub aula-pub--m">Mulheres</span></div>
+    <div class="aula-row"><span class="aula-dia">Qua</span><span class="aula-hora">19h30</span><span class="aula-nome">Curso de Cabala para Vida Real</span><span class="aula-prof">Rabino Mendi Simonowits</span><span class="aula-pub">Homens e Mulheres</span></div>
+    <div class="aula-row"><span class="aula-dia">Qui</span><span class="aula-hora">19h30</span><span class="aula-nome">Aula de Tanya</span><span class="aula-prof">Rafa Susskind</span><span class="aula-pub">Homens e Mulheres</span></div>
+    <div class="aula-row aula-row--sh"><span class="aula-dia">Shabat</span><span class="aula-hora">8h45</span><span class="aula-nome">Aula de Chassidut</span><span class="aula-prof">Rabino Mendi Simonowits</span><span class="aula-pub aula-pub--h">Homens</span></div>
+    <div class="aula-row aula-row--sh"><span class="aula-dia">Shabat</span><span class="aula-hora">16h15</span><span class="aula-nome">Aula sobre Parashat</span><span class="aula-prof">Rabino Belinow</span><span class="aula-pub aula-pub--h">Homens</span></div>
+    <div class="aula-row aula-row--sh"><span class="aula-dia">Shabat</span><span class="aula-hora">16h30</span><span class="aula-nome">Aula sobre Parashat</span><span class="aula-prof">Chanie Belinow / Chana Labkowski</span><span class="aula-pub aula-pub--m">Mulheres</span></div>
+  </div>
+
+</div>
+
+</body>
+</html>

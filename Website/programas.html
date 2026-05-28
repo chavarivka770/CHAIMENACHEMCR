@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Programas — Chai Menachem</title>
+<link rel="icon" type="image/png" href="logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+
+.page{max-width:1000px;margin:0 auto;padding:5rem 2.5rem 6rem}
+
+/* HEADER */
+.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.eyebrow-line{display:block;width:32px;height:1px;background:rgba(201,168,76,.5)}
+.eyebrow-text{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,168,76,.7)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;line-height:1.15;color:#E8DFD0;margin-bottom:3rem}
+.sec-title em{font-style:italic;color:#C4975A}
+
+/* GRID */
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+
+/* CARD */
+.prog-card{padding:2.2rem 1.8rem;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:.8rem;transition:border-color .3s,background .3s}
+.prog-card:hover{border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.04)}
+.prog-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:rgba(201,168,76,.18);line-height:1}
+.prog-icon{width:36px;height:36px;color:rgba(201,168,76,.6)}
+.prog-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:#E8DFD0;line-height:1.3}
+.prog-desc{font-size:.84rem;line-height:1.8;color:rgba(232,223,208,.55);flex:1}
+.prog-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:#C4975A;text-decoration:none;margin-top:.5rem;transition:gap .3s}
+.prog-link:hover{gap:.9rem}
+
+.calendario-btn{display:inline-block;padding:.7rem 1.8rem;border:1px solid rgba(201,168,76,.45);color:#C4975A;font-size:.65rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s,color .3s}
+.calendario-btn:hover{background:#C4975A;color:#0A0705}
+.participar-btn{display:block;text-align:center;margin-top:1.2rem;padding:.75rem 1rem;background:transparent;border:1px solid rgba(201,168,76,.45);color:#C4975A;font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;transition:background .3s,color .3s,border-color .3s}
+.participar-btn:hover{background:#C4975A;color:#0A0705;border-color:#C4975A}
+
+@media(max-width:720px){.prog-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:3rem">
+    <div>
+      <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">O que oferecemos</span></div>
+      <h2 class="sec-title" style="margin-bottom:0">Nossos<br><em>Programas</em></h2>
+    </div>
+    <a href="calendario.html" class="calendario-btn">Ver Calendário</a>
+  </div>
+
+  <div class="prog-grid">
+
+    <!-- EVENTOS PARA CASAIS -->
+    <div class="prog-card">
+      <div class="prog-num">01</div>
+      <svg class="prog-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="16" r="6"/><circle cx="30" cy="16" r="6"/><path d="M6 38C6 30 12 26 18 26C22 26 26 28 28 32"/><path d="M28 32C30 28 36 26 42 38"/></svg>
+      <h3 class="prog-name">Eventos para Casais</h3>
+      <p class="prog-desc">Uma noite descontraída e gostosa para casais! Muita conversa boa, risadas e momentos especiais — tudo isso com um toque de sabedoria judaica que enriquece e fortalece o lar. Venha se divertir junto com outros casais da comunidade!</p>
+      <a href="https://wa.me/5511991969797?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Chai%20Menachem%20e%20gostaria%20de%20participar%20dos%20Eventos%20para%20Casais%20%F0%9F%98%8A" target="_blank" rel="noopener" class="participar-btn">Participar</a>
+    </div>
+
+    <!-- VOZ DE RACHEL -->
+    <div class="prog-card">
+      <div class="prog-num">02</div>
+      <svg class="prog-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 6C14 6 8 14 8 22C8 30 14 36 24 36C34 36 40 30 40 22C40 14 34 6 24 6Z"/><path d="M16 22L20 26L32 14" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 36L24 44M16 44L32 44"/></svg>
+      <h3 class="prog-name">Voz de Rachel</h3>
+      <p class="prog-desc">Encontro mensal exclusivo para mulheres. Lemos o Tehilim juntas, seguido de almoço especial e uma palestra inspiradora com uma convidada diferente a cada mês. Um momento de espiritualidade, força e sororidade.</p>
+      <a href="https://wa.me/5511991969797?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Chai%20Menachem%20e%20gostaria%20de%20participar%20da%20Voz%20de%20Rachel%20%F0%9F%98%8A" target="_blank" rel="noopener" class="participar-btn">Participar</a>
+    </div>
+
+    <!-- CHAI TEENS -->
+    <div class="prog-card">
+      <div class="prog-num">03</div>
+      <svg class="prog-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="14" r="6"/><path d="M12 42C12 32 18 28 24 28C30 28 36 32 36 42"/><path d="M16 22L10 30M32 22L38 30"/><path d="M10 30L8 38M38 30L40 38"/></svg>
+      <h3 class="prog-name">Chai Teens</h3>
+      <p class="prog-desc">Programa especial para jovens que desejam explorar sua identidade judaica de forma divertida e significativa. Atividades, encontros e experiências que conectam os teenagers à comunidade e às suas raízes.</p>
+      <a href="https://wa.me/5511946508880?text=Ol%C3%A1!%20Vi%20o%20site%20do%20Chai%20Menachem%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Chai%20Teens%20%F0%9F%98%8A" target="_blank" rel="noopener" class="participar-btn">Participar</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
