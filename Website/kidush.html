@@ -97,20 +97,8 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
   <p class="sec-body">O Kidush é uma oportunidade de agradecer a D'us, homenagear uma pessoa querida ou marcar uma data especial junto à comunidade Chai Menachem.</p>
 
   <!-- OCASIÕES -->
-  <div>
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#C4975A;margin-bottom:1rem;text-align:center">Você pode oferecer um Kidush em ocasiões como:</h3>
-    <div class="occasions">
-      <div class="occasion-item">Aniversário</div>
-      <div class="occasion-item">Bar ou Bat Mitzvá</div>
-      <div class="occasion-item">Casamento</div>
-      <div class="occasion-item">Nascimento de filho(a)</div>
-      <div class="occasion-item">Ufruf</div>
-      <div class="occasion-item">Yortzeit</div>
-      <div class="occasion-item">Refuá Shelemá</div>
-      <div class="occasion-item">Hodaá (agradecimento)</div>
-      <div class="occasion-item">Em memória de um ente querido</div>
-      <div class="occasion-item">Qualquer ocasião especial</div>
-    </div>
+  <div style="margin:2rem 0;padding:1.5rem;background:rgba(255,255,255,.02);border-left:2px solid rgba(201,168,76,.3)">
+    <p style="font-size:.85rem;color:rgba(232,223,208,.65);margin-bottom:.8rem;line-height:1.7">Você pode oferecer um Kidush em ocasiões como: Aniversário, Bar ou Bat Mitzvá, Casamento, Nascimento de filho(a), Ufruf, Yortzeit, Em memória de um ente querido, ou qualquer ocasião especial.</p>
   </div>
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
@@ -119,7 +107,6 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
   <div class="benefits">
     <div class="benefits-title">O que está incluído?</div>
     <div class="benefits-grid">
-      <div class="benefit-item"><span class="benefit-check">✓</span>Anúncio do patrocinador antes do Kidush</div>
       <div class="benefit-item"><span class="benefit-check">✓</span>Menção no grupo da comunidade</div>
       <div class="benefit-item"><span class="benefit-check">✓</span>Placa de homenagem na mesa do Kidush</div>
       <div class="benefit-item"><span class="benefit-check">✓</span>Organização completa pela equipe da Chai Menachem</div>
@@ -131,7 +118,8 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
   <!-- TIPOS DE KIDUSH -->
   <div>
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1.5rem;text-align:center">Tipos de Kidush</h3>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:.5rem;text-align:center">Tipos de Kidush</h3>
+    <p style="text-align:center;font-size:.85rem;color:rgba(232,223,208,.6);margin-bottom:1.5rem">Escolha a opção que melhor se adequa ao seu evento:</p>
     <div class="types">
       <div class="type-card">
         <div class="type-title">Kidush Básico</div>
@@ -166,27 +154,17 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
         <input type="text" name="em_memoria_de" placeholder="Nome (opcional)"/>
       </div>
       <div class="form-group">
-        <label>Para Refuá Shelemá de:</label>
-        <input type="text" name="refua_shlemá" placeholder="Nome (opcional)"/>
-      </div>
-      <div class="form-group">
         <label>Mensagem adicional (opcional):</label>
         <textarea name="mensagem_adicional" placeholder="Conte-nos mais..."></textarea>
       </div>
     </div>
 
-    <!-- DATA E PARASHÁ -->
+    <!-- DATA -->
     <div class="form-section">
       <div class="form-subtitle">Escolha a Data</div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="data">Data desejada:</label>
-          <input type="date" id="data" name="data" required/>
-        </div>
-        <div class="form-group">
-          <label for="parasha">Parashá (opcional):</label>
-          <input type="text" id="parasha" name="parasha" placeholder="Nome da parashá"/>
-        </div>
+      <div class="form-group">
+        <label for="data">Data desejada:</label>
+        <input type="date" id="data" name="data" required/>
       </div>
     </div>
 
