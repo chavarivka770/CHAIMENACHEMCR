@@ -40,8 +40,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 @media(max-width:720px){.festa-grid{grid-template-columns:1fr}}
 
 /* TILE */
-.festa-tile{position:relative;aspect-ratio:3/4;border-right:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.6rem;cursor:pointer;transition:background .4s,filter .4s;background:#0A0705;background-size:cover;background-position:center;filter:brightness(.6)}
-.festa-tile:hover{filter:brightness(.75)}
+.festa-tile{position:relative;aspect-ratio:3/4;border-right:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.6rem;cursor:pointer;background:#0A0705;background-size:cover;background-position:center;filter:brightness(.6)}
 .festa-tile:last-child{border-right:none}
 .festa-tile:hover{background:rgba(201,168,76,.04)}
 @media(max-width:720px){.festa-tile{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);aspect-ratio:unset;min-height:260px}}
@@ -51,9 +50,8 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 .festa-tile-num{position:absolute;top:1.5rem;right:1.5rem;font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:700;color:rgba(201,168,76,.04);line-height:1}
 .festa-heb{font-family:'Frank Ruhl Libre',serif;font-size:2rem;font-weight:700;color:rgba(201,168,76,.13);line-height:1;margin-bottom:.6rem;position:relative;z-index:1}
 .festa-name{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:#E8DFD0;line-height:1.1;margin-bottom:.7rem;position:relative;z-index:1}
-.festa-desc{font-size:.7rem;font-weight:300;color:rgba(232,223,208,.5);line-height:1.75;position:relative;z-index:1}
-.festa-tile-gallery-hint{display:flex;align-items:center;gap:.4rem;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:#C4975A;margin-top:.8rem;opacity:.6;transition:opacity .3s;position:relative;z-index:1}
-.festa-tile:hover .festa-tile-gallery-hint{opacity:1}
+.festa-desc{font-size:.7rem;font-weight:300;color:rgba(232,223,208,.85);line-height:1.75;position:relative;z-index:1}
+.festa-tile-gallery-hint{display:flex;align-items:center;gap:.4rem;font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;color:#C4975A;margin-top:.8rem;opacity:.9;position:relative;z-index:1}
 
 /* LIGHTBOX */
 #lightbox{display:none;position:fixed;inset:0;z-index:9000;background:rgba(4,3,6,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;padding:2rem}
