@@ -40,7 +40,8 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 @media(max-width:720px){.festa-grid{grid-template-columns:1fr}}
 
 /* TILE */
-.festa-tile{position:relative;aspect-ratio:3/4;border-right:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.6rem;cursor:pointer;transition:background .4s;background:#0A0705}
+.festa-tile{position:relative;aspect-ratio:3/4;border-right:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.6rem;cursor:pointer;transition:background .4s,filter .4s;background:#0A0705;background-size:cover;background-position:center;filter:brightness(.6)}
+.festa-tile:hover{filter:brightness(.75)}
 .festa-tile:last-child{border-right:none}
 .festa-tile:hover{background:rgba(201,168,76,.04)}
 @media(max-width:720px){.festa-tile{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);aspect-ratio:unset;min-height:260px}}
@@ -119,7 +120,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
   <div class="festa-grid">
 
     <!-- CHANUCÁ -->
-    <div class="festa-tile" style="cursor:default">
+    <div class="festa-tile" style="cursor:default;background-image:url('WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg')">
       <h3 class="festa-name">Chanucá</h3>
       <p class="festa-date">Dezembro 2026</p>
       <p class="festa-desc">Oito noites de luz e milagres. Acendemos a Chanukiá juntos, celebrando a vitória da luz sobre as trevas.</p>
@@ -127,7 +128,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
     </div>
 
     <!-- PURIM -->
-    <div class="festa-tile" style="cursor:default">
+    <div class="festa-tile" style="cursor:default;background-image:url('WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg')">
       <h3 class="festa-name">Purim</h3>
       <p class="festa-date">Março 2026</p>
       <p class="festa-desc">Alegria, fantasias e a leitura do Meguilá. Uma das festas mais vibrantes e coloridas do ano judaico.</p>
@@ -135,7 +136,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
     </div>
 
     <!-- LAG BA'OMER -->
-    <div class="festa-tile" style="cursor:default">
+    <div class="festa-tile" style="cursor:default;background-image:url('WhatsApp Image 2026-05-19 at 10.27.20 (3).jpeg')">
       <h3 class="festa-name">Lag Ba'Omer</h3>
       <p class="festa-date">Maio 2026</p>
       <p class="festa-desc">Fogueiras, música e celebração do legado do Rabi Shimon Bar Yochai. Uma noite inesquecível em comunidade.</p>

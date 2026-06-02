@@ -1,52 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Espaço — Chai Menachem</title>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Espaço — Chai Menachem Centro Chabad</title>
 <link rel="icon" type="image/png" href="logo.png"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 <link rel="stylesheet" href="shared.css"/>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
-
-.back-btn{position:fixed;top:1rem;left:1.5rem;z-index:500;display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;background:rgba(14,10,15,0.85);backdrop-filter:blur(12px);border:1px solid rgba(201,168,76,0.22);border-radius:999px;color:#C9A84C;font-family:'DM Sans',sans-serif;font-size:.8rem;letter-spacing:.08em;text-decoration:none;transition:background .25s,box-shadow .25s}
-.back-btn:hover{background:rgba(201,168,76,0.12);box-shadow:0 0 32px rgba(201,168,76,0.18)}
-.back-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-.page{max-width:1100px;margin:0 auto;padding:6rem 2.5rem 6rem}
-
-.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
-.eyebrow-line{display:block;width:32px;height:1px;background:rgba(201,168,76,.5)}
-.eyebrow-text{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,168,76,.7)}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;line-height:1.15;color:#E8DFD0;margin-bottom:.5rem}
-.sec-title em{font-style:italic;color:#C4975A}
-.sec-body{font-size:.92rem;line-height:1.8;color:rgba(232,223,208,.6);margin-bottom:3rem}
-
-/* GRID */
-.espaco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-@media(max-width:720px){.espaco-grid{grid-template-columns:repeat(2,1fr)}}
-
-.espaco-thumb{aspect-ratio:4/3;overflow:hidden;cursor:pointer;position:relative}
-.espaco-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s,filter .4s;filter:brightness(.85)}
-.espaco-thumb:hover img{transform:scale(1.04);filter:brightness(1)}
-.espaco-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);padding:1rem;display:flex;align-items:flex-end;justify-content:center;min-height:50px}
-.espaco-overlay span{font-size:.75rem;color:#C9A84C;letter-spacing:.1em;text-transform:uppercase;text-align:center;font-weight:500}
-
-/* LIGHTBOX */
-#lightbox{display:none;position:fixed;inset:0;z-index:9000;background:rgba(4,3,6,.97);backdrop-filter:blur(12px);flex-direction:column;align-items:center;justify-content:center;padding:2rem}
-#lightbox.active{display:flex}
-.lb-header{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 2rem;border-bottom:1px solid rgba(255,255,255,.07)}
-.lb-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:#C4975A;font-style:italic}
-.lb-close{background:none;border:1px solid rgba(201,168,76,.3);color:#C4975A;width:34px;height:34px;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:background .3s}
-.lb-close:hover{background:rgba(201,168,76,.15)}
-.lb-main{display:flex;align-items:center;gap:1.5rem;margin-top:0;width:100%;max-width:960px;flex:1}
-.lb-arrow{background:none;border:1px solid rgba(201,168,76,.3);color:#C4975A;width:42px;height:42px;flex-shrink:0;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:background .3s}
-.lb-arrow:hover{background:rgba(201,168,76,.12)}
-.lb-img-wrap{flex:1;max-height:72vh;display:flex;align-items:center;justify-content:center}
-#lb-img{max-width:100%;max-height:72vh;object-fit:contain;display:block;border:1px solid rgba(255,255,255,.07)}
-.lb-counter{font-size:.63rem;letter-spacing:.15em;color:rgba(232,223,208,.4);margin-top:.8rem}
+main{margin-left:0}
 </style>
 </head>
 <body>
@@ -58,65 +20,34 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
   </a>
 </header>
 
+<!-- TOP BAR -->
+<div class="top-bar" id="topBar">
+  <span class="top-bar-heb">יחי המלך המשיח</span>
+  <div class="top-bar-right">
+    <a href="https://wa.me/5511991969797" target="_blank" rel="noopener" class="top-bar-link">+55 (11) 99196-9797</a>
+    <a href="https://instagram.com/chaimenachem" target="_blank" rel="noopener" class="top-bar-link">@chaimenachem</a>
+  </div>
+</div>
+
 <a href="index.html" class="back-btn"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Voltar</a>
+<main>
 
-<div class="page">
-  <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Chai Menachem · Higienópolis</span></div>
-  <h2 class="sec-title">Nosso <em>Espaço</em></h2>
-  <p class="sec-body">Um ambiente acolhedor no coração de Higienópolis, preparado para receber a comunidade com calor e alegria.</p>
-
+<!-- GALERIA ESPAÇO -->
+<section id="espaco" style="padding:0;background:var(--bg3)">
   <div class="espaco-grid">
-    <div class="espaco-thumb" onclick="openLb(0)"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="Espaço"/><div class="espaco-overlay"><span>Salão de Rezas Masculino</span></div></div>
-    <div class="espaco-thumb" onclick="openLb(1)"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="Espaço"/><div class="espaco-overlay"><span>Salão de Rezas Feminino</span></div></div>
-    <div class="espaco-thumb" onclick="openLb(2)"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (4).jpeg" alt="Espaço"/><div class="espaco-overlay"><span>O Rebe</span></div></div>
-    <div class="espaco-thumb" onclick="openLb(3)"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (3).jpeg" alt="Espaço"/><div class="espaco-overlay"><span>Netilat Yadaim</span></div></div>
-    <div class="espaco-thumb" onclick="openLb(4)"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg" alt="Espaço"/><div class="espaco-overlay"><span>Entrada</span></div></div>
-    <div class="espaco-thumb" onclick="openLb(5)"><img src="WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="Espaço"/><div class="espaco-overlay"><span>Bimá</span></div></div>
-    <div class="espaco-thumb" onclick="openLb(6)"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (2).jpeg" alt="Espaço"/><div class="espaco-overlay"><span>Sidurim</span></div></div>
+    <div class="espaco-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="Salão de Rezas Masculino"/><div class="espaco-overlay"><span>Salão de Rezas Masculino</span></div></div>
+    <div class="espaco-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="Salão de Rezas Feminino"/><div class="espaco-overlay"><span>Salão de Rezas Feminino</span></div></div>
+    <div class="espaco-item espaco-item--tall"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (4).jpeg" alt="O Rebe"/><div class="espaco-overlay"><span>O Rebe O Nosso Líder</span></div></div>
+    <div class="espaco-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (3).jpeg" alt="Netilat Yadaim"/><div class="espaco-overlay"><span>Netilat Yadaim</span></div></div>
+    <div class="espaco-item"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg" alt="Entrada"/><div class="espaco-overlay"><span>Entrada</span></div></div>
+    <div class="espaco-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="Bimá"/><div class="espaco-overlay"><span>Bimá</span></div></div>
+    <div class="espaco-item"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (2).jpeg" alt="Sidurim"/><div class="espaco-overlay"><span>Sidurim</span></div></div>
   </div>
-</div>
+</section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-  <div class="lb-header">
-    <span class="lb-title">Espaço — Chai Menachem</span>
-    <button class="lb-close" onclick="closeLb()">✕</button>
-  </div>
-  <div class="lb-main">
-    <button class="lb-arrow" onclick="setPhoto(lbIdx-1)">&#8592;</button>
-    <div class="lb-img-wrap"><img id="lb-img" src="" alt=""/></div>
-    <button class="lb-arrow" onclick="setPhoto(lbIdx+1)">&#8594;</button>
-  </div>
-  <div class="lb-counter" id="lb-counter"></div>
-</div>
+</main>
 
-<script>
-const photos = [
-  'WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg',
-  'WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg',
-  'WhatsApp Image 2026-05-19 at 10.27.21 (4).jpeg',
-  'WhatsApp Image 2026-05-19 at 10.27.20 (3).jpeg',
-  'WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg',
-  'WhatsApp Image 2026-05-19 at 10.27.20.jpeg',
-  'WhatsApp Image 2026-05-19 at 10.27.21 (2).jpeg'
-];
-let lbIdx = 0;
-
-function openLb(i){ lbIdx=i; setPhoto(i); document.getElementById('lightbox').classList.add('active'); document.body.style.overflow='hidden'; }
-function closeLb(){ document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow=''; }
-function setPhoto(i){
-  lbIdx = (i + photos.length) % photos.length;
-  document.getElementById('lb-img').src = photos[lbIdx];
-  document.getElementById('lb-counter').textContent = (lbIdx+1) + ' / ' + photos.length;
-}
-document.addEventListener('keydown', e=>{
-  if (!document.getElementById('lightbox').classList.contains('active')) return;
-  if (e.key==='ArrowRight') setPhoto(lbIdx+1);
-  if (e.key==='ArrowLeft') setPhoto(lbIdx-1);
-  if (e.key==='Escape') closeLb();
-});
-document.getElementById('lightbox').addEventListener('click', function(e){ if(e.target===this) closeLb(); });
-</script>
+<script src="script.js"></script>
 
 
 <footer class="site-footer">
