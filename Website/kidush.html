@@ -76,6 +76,9 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
 .success-msg{display:none;text-align:center;padding:2rem;border:1px solid rgba(201,168,76,.3);background:rgba(201,168,76,.05);margin-top:1.5rem;border-radius:2px}
 .success-msg p{color:rgba(201,168,76,.9);font-size:.9rem;line-height:1.7}
+
+.type-btn:hover{background:rgba(201,168,76,.1);border-color:#C4975A}
+.type-btn.selected{background:rgba(201,168,76,.2);border-color:#C4975A;color:#E8C870}
 </style>
 <link rel="stylesheet" href="shared.css"/>
 </head>
@@ -127,60 +130,29 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
   <!-- TIPOS DE KIDUSH -->
   <div>
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:.5rem;text-align:center">Tipos de Kidush</h3>
-    <p style="text-align:center;font-size:.85rem;color:rgba(232,223,208,.6);margin-bottom:1.5rem">Escolha a opção que melhor se adequa ao seu evento:</p>
-    <div class="types">
-      <div class="type-card">
-        <div class="type-title">Kidush Básico</div>
-        <div class="type-desc">Bolos, bebidas, café, chá e itens tradicionais.</div>
-      </div>
-      <div class="type-card">
-        <div class="type-title">Kidush Completo</div>
-        <div class="type-desc">Variedade ampliada de salgados, doces, bebidas e opções especiais.</div>
-      </div>
-      <div class="type-card">
-        <div class="type-title">Kidush Especial</div>
-        <div class="type-desc">Montado de acordo com a necessidade e preferência do patrocinador.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
-
-  <!-- HORÁRIO -->
-  <div>
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1.5rem;text-align:center">Escolha o horário</h3>
-    <div class="types">
-      <div class="type-card">
-        <div style="font-size:1.5rem;margin-bottom:.8rem">🌙</div>
-        <div class="type-title">Kidush Noturno</div>
-        <div class="type-desc">Após o Kabalat Shabat.</div>
-      </div>
-      <div class="type-card">
-        <div style="font-size:1.5rem;margin-bottom:.8rem">☀️</div>
-        <div class="type-title">Kidush Diurno</div>
-        <div class="type-desc">Após a reza de Shabat pela manhã.</div>
-      </div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1.5rem;text-align:center">Tipos de Kidush</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:700px;margin:0 auto">
+      <button type="button" onclick="selectType(this,'Kidush Básico')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px">
+        <div style="font-weight:600;margin-bottom:.4rem">Kidush Básico</div>
+        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Bolos, bebidas, café e chá</div>
+      </button>
+      <button type="button" onclick="selectType(this,'Kidush Completo')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px">
+        <div style="font-weight:600;margin-bottom:.4rem">Kidush Completo</div>
+        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Salgados, doces e opções especiais</div>
+      </button>
+      <button type="button" onclick="selectType(this,'Kidush Especial')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px">
+        <div style="font-weight:600;margin-bottom:.4rem">Kidush Especial</div>
+        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Personalizado conforme sua preferência</div>
+      </button>
     </div>
   </div>
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
 
   <!-- CARDÁPIO -->
-  <div>
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1rem;text-align:center">Escolha o cardápio</h3>
-    <p style="text-align:center;font-size:.9rem;color:rgba(232,223,208,.65);margin-bottom:1.5rem;line-height:1.7">O patrocinador pode definir o cardápio de acordo com sua preferência e orçamento. Nossa equipe auxiliará na escolha e organização de todos os detalhes.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;max-width:700px;margin:0 auto">
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Bolos e bebidas</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Salgados</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Tsholent e kuguel</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Saladas</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Sushi</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Churrasco</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Shawarma</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Sobremesas especiais</div>
-      <div style="padding:.9rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);text-align:center;font-size:.85rem;color:rgba(232,223,208,.75);border-radius:2px">Outros</div>
-    </div>
+  <div style="text-align:center;padding:2rem;background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.15);border-radius:2px">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1rem">Escolha o cardápio</h3>
+    <p style="font-size:.9rem;color:rgba(232,223,208,.7);line-height:1.8">O patrocinador pode definir o cardápio de acordo com sua preferência e orçamento. Nossa equipe auxiliará na escolha e organização de todos os detalhes.</p>
   </div>
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
@@ -188,6 +160,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
   <!-- FORMULÁRIO -->
   <form id="contactForm" action="https://formspree.io/f/chaimenachemadm@gmail.com" method="POST">
     <input type="hidden" name="_subject" value="Solicitação de Kidush — Chai Menachem"/>
+    <input type="hidden" id="tipoKidush" name="tipo_kidush" value=""/>
 
     <!-- HOMENAGEM -->
     <div class="form-section">
@@ -262,6 +235,12 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 </div>
 
 <script>
+function selectType(el, type) {
+  document.querySelectorAll('.type-btn').forEach(btn => btn.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('tipoKidush').value = type;
+}
+
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', async function(e) {
   e.preventDefault();
