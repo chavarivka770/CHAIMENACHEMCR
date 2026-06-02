@@ -65,8 +65,8 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 <div class="page">
 
   <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Chai Menachem · Higienópolis</span></div>
-  <h1 class="sec-title">Solicite seu<br><em>Kidush</em></h1>
-  <p class="sec-body">O Kidush é uma bênção sobre o vinho que marca o início do Shabat e das festas judaicas. Solicite conosco para celebrar este momento especial em comunidade.</p>
+  <h1 class="sec-title">Reserve seu<br><em>Kidush</em></h1>
+  <p class="sec-body">Celebre os momentos sagrados com um Kidush em nossa comunidade. Deixe seus dados e entraremos em contato para confirmar os detalhes da sua celebração.</p>
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
 
@@ -88,7 +88,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
     <div class="form-group">
       <label for="data">Data</label>
-      <input type="date" id="data" name="data" required/>
+      <input type="date" id="data" name="data" required disabled style="opacity:.7;cursor:not-allowed"/>
     </div>
 
     <button type="submit" class="submit-btn">Enviar</button>
@@ -101,6 +101,16 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 </div>
 
 <script>
+// Preencher data automaticamente com a data de hoje
+document.addEventListener('DOMContentLoaded', function() {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const dateString = `${yyyy}-${mm}-${dd}`;
+  document.getElementById('data').value = dateString;
+});
+
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', async function(e) {
   e.preventDefault();
