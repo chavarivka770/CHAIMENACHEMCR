@@ -40,8 +40,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 @media(max-width:720px){.festa-grid{grid-template-columns:1fr}}
 
 /* TILE */
-.festa-tile{position:relative;aspect-ratio:3/4;border-right:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.6rem;cursor:pointer;background:#0A0705;background-size:cover;background-position:center;filter:brightness(.6);clip-path:polygon(0 0,100% 0,100% 65%,0 65%)}
-.festa-tile::after{content:'';position:absolute;bottom:0;left:0;right:0;height:35%;background:linear-gradient(to top,rgba(7,5,10,.95),transparent);z-index:0}
+.festa-tile{position:relative;aspect-ratio:3/4;border-right:1px solid rgba(255,255,255,.07);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem 1.6rem;cursor:pointer;background:#0A0705;background-size:cover;background-position:center;filter:brightness(.6)}
 .festa-tile:last-child{border-right:none}
 .festa-tile:hover{background:rgba(201,168,76,.04)}
 @media(max-width:720px){.festa-tile{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);aspect-ratio:unset;min-height:260px}}
