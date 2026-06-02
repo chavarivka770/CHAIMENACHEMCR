@@ -8,45 +8,73 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;min-height:100%}
+html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
 
 .back-btn{position:fixed;top:1rem;left:1.5rem;z-index:500;display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1rem;background:rgba(14,10,15,0.85);backdrop-filter:blur(12px);border:1px solid rgba(201,168,76,0.22);border-radius:999px;color:#C9A84C;font-family:'DM Sans',sans-serif;font-size:.8rem;letter-spacing:.08em;text-decoration:none;transition:background .25s,box-shadow .25s}
 .back-btn:hover{background:rgba(201,168,76,0.12);box-shadow:0 0 32px rgba(201,168,76,0.18)}
 .back-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-.page{max-width:680px;margin:0 auto;padding:7rem 2rem 6rem}
+.page{max-width:900px;margin:0 auto;padding:7rem 2rem 6rem}
 
-.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;justify-content:center}
 .eyebrow-line{display:block;width:32px;height:1px;background:rgba(201,168,76,.5)}
-.eyebrow-text{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,168,76,.7)}
+.eyebrow-text{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,168,76,.7);text-align:center}
 
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.15;color:#E8DFD0;margin-bottom:.6rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.2rem);font-weight:300;line-height:1.15;color:#E8DFD0;text-align:center;margin-bottom:.6rem}
 .sec-title em{font-style:italic;color:#C4975A}
-.sec-body{font-size:.92rem;line-height:1.8;color:rgba(232,223,208,.6);margin-bottom:2.5rem}
+.sec-body{font-size:.92rem;line-height:1.8;color:rgba(232,223,208,.6);text-align:center;max-width:680px;margin:0 auto 2.5rem}
+
+/* OCCASIONS */
+.occasions{margin:3rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+.occasion-item{padding:1rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.2);text-align:center;font-size:.85rem;color:rgba(232,223,208,.8)}
+
+/* BENEFITS */
+.benefits{margin:3rem 0;background:rgba(201,168,76,.04);border:1px solid rgba(201,168,76,.15);padding:2rem;border-radius:2px}
+.benefits-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:#C4975A;margin-bottom:1.5rem;text-align:center}
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.benefit-item{display:flex;align-items:flex-start;gap:.8rem;font-size:.9rem;line-height:1.7;color:rgba(232,223,208,.75)}
+.benefit-check{flex-shrink:0;color:#C4975A;font-weight:bold;margin-top:.2rem}
+
+/* TYPES */
+.types{margin:3rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.type-card{padding:1.5rem;background:rgba(10,6,3,.6);border:1px solid rgba(255,255,255,.1);border-radius:2px}
+.type-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#C4975A;margin-bottom:.8rem}
+.type-desc{font-size:.85rem;color:rgba(232,223,208,.7);line-height:1.6}
 
 /* DIVIDER */
-.divider{display:flex;align-items:center;gap:1rem;margin:2rem 0}
+.divider{display:flex;align-items:center;gap:1rem;margin:2.5rem 0}
 .divider-line{flex:1;height:1px;background:rgba(255,255,255,.07)}
 .divider-star{color:rgba(201,168,76,.4);font-size:.7rem}
 
 /* FORM */
+.form-section{margin:3rem 0;background:rgba(201,168,76,.03);padding:2rem;border:1px solid rgba(201,168,76,.15);border-radius:2px}
+.form-subtitle{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#C4975A;margin-bottom:1.2rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
-@media(max-width:480px){.form-row{grid-template-columns:1fr}}
-.form-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
 .form-group label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,168,76,.7)}
 .form-group input,
-.form-group select,
 .form-group textarea{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#E8DFD0;font-family:'DM Sans',sans-serif;font-size:.9rem;padding:.75rem 1rem;outline:none;transition:border-color .2s;width:100%;border-radius:2px}
 .form-group input:focus,
-.form-group select:focus,
 .form-group textarea:focus{border-color:rgba(201,168,76,.5)}
-.form-group select option{background:#0A0705}
-.form-group textarea{resize:vertical;min-height:120px}
+.form-group textarea{resize:vertical;min-height:80px}
 
-.submit-btn{width:100%;padding:1rem;background:transparent;border:1px solid rgba(201,168,76,.5);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;transition:background .25s,border-color .25s;margin-top:.5rem}
+/* GALLERY */
+.gallery{margin:3rem 0}
+.gallery-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:#C4975A;margin-bottom:1.5rem;text-align:center}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:2rem}
+.gallery-item{aspect-ratio:4/3;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);overflow:hidden;cursor:pointer;transition:transform .3s,border-color .3s}
+.gallery-item:hover{transform:scale(1.02);border-color:rgba(201,168,76,.4)}
+.gallery-item img{width:100%;height:100%;object-fit:cover}
+
+/* BUTTONS */
+.submit-btn{width:100%;padding:1.1rem;background:transparent;border:1px solid rgba(201,168,76,.5);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background .25s,border-color .25s;margin-top:1rem;border-radius:2px}
 .submit-btn:hover{background:rgba(201,168,76,.12);border-color:#C4975A}
 
-.success-msg{display:none;text-align:center;padding:2rem;border:1px solid rgba(201,168,76,.3);background:rgba(201,168,76,.05);margin-top:1.5rem}
+/* CLOSING */
+.closing{margin:3rem 0;text-align:center;padding:2rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);border-radius:2px;font-size:.95rem;line-height:1.8;color:rgba(232,223,208,.8);font-style:italic}
+
+.success-msg{display:none;text-align:center;padding:2rem;border:1px solid rgba(201,168,76,.3);background:rgba(201,168,76,.05);margin-top:1.5rem;border-radius:2px}
 .success-msg p{color:rgba(201,168,76,.9);font-size:.9rem;line-height:1.7}
 </style>
 <link rel="stylesheet" href="shared.css"/>
@@ -65,52 +93,150 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 <div class="page">
 
   <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Chai Menachem · Higienópolis</span></div>
-  <h1 class="sec-title">Reserve seu<br><em>Kidush</em></h1>
-  <p class="sec-body">Celebre os momentos sagrados com um Kidush em nossa comunidade. Deixe seus dados e entraremos em contato para confirmar os detalhes da sua celebração.</p>
+  <h1 class="sec-title">Celebre um momento<br><em>especial com a comunidade</em></h1>
+  <p class="sec-body">O Kidush é uma oportunidade de agradecer a D'us, homenagear uma pessoa querida ou marcar uma data especial junto à comunidade Chai Menachem.</p>
+
+  <!-- OCASIÕES -->
+  <div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#C4975A;margin-bottom:1rem;text-align:center">Você pode oferecer um Kidush em ocasiões como:</h3>
+    <div class="occasions">
+      <div class="occasion-item">Aniversário</div>
+      <div class="occasion-item">Bar ou Bat Mitzvá</div>
+      <div class="occasion-item">Casamento</div>
+      <div class="occasion-item">Nascimento de filho(a)</div>
+      <div class="occasion-item">Ufruf</div>
+      <div class="occasion-item">Yortzeit</div>
+      <div class="occasion-item">Refuá Shelemá</div>
+      <div class="occasion-item">Hodaá (agradecimento)</div>
+      <div class="occasion-item">Em memória de um ente querido</div>
+      <div class="occasion-item">Qualquer ocasião especial</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
+
+  <!-- O QUE ESTÁ INCLUÍDO -->
+  <div class="benefits">
+    <div class="benefits-title">O que está incluído?</div>
+    <div class="benefits-grid">
+      <div class="benefit-item"><span class="benefit-check">✓</span>Anúncio do patrocinador antes do Kidush</div>
+      <div class="benefit-item"><span class="benefit-check">✓</span>Menção no grupo da comunidade</div>
+      <div class="benefit-item"><span class="benefit-check">✓</span>Placa de homenagem na mesa do Kidush</div>
+      <div class="benefit-item"><span class="benefit-check">✓</span>Organização completa pela equipe da Chai Menachem</div>
+      <div class="benefit-item"><span class="benefit-check">✓</span>Montagem, limpeza e logística</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
+
+  <!-- TIPOS DE KIDUSH -->
+  <div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1.5rem;text-align:center">Tipos de Kidush</h3>
+    <div class="types">
+      <div class="type-card">
+        <div class="type-title">Kidush Básico</div>
+        <div class="type-desc">Bolos, bebidas, café, chá e itens tradicionais.</div>
+      </div>
+      <div class="type-card">
+        <div class="type-title">Kidush Completo</div>
+        <div class="type-desc">Variedade ampliada de salgados, doces, bebidas e opções especiais.</div>
+      </div>
+      <div class="type-card">
+        <div class="type-title">Kidush Especial</div>
+        <div class="type-desc">Montado de acordo com a necessidade e preferência do patrocinador.</div>
+      </div>
+    </div>
+  </div>
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
 
   <!-- FORMULÁRIO -->
   <form id="contactForm" action="https://formspree.io/f/chaimenachemadm@gmail.com" method="POST">
     <input type="hidden" name="_subject" value="Solicitação de Kidush — Chai Menachem"/>
-    <input type="hidden" name="tipo_de_evento" value="Kidush"/>
 
-    <div class="form-row">
+    <!-- HOMENAGEM -->
+    <div class="form-section">
+      <div class="form-subtitle">Homenagem</div>
       <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required placeholder="Seu nome"/>
+        <label>Em honra de:</label>
+        <input type="text" name="em_honra_de" placeholder="Nome (opcional)"/>
       </div>
       <div class="form-group">
-        <label for="sobrenome">Sobrenome</label>
-        <input type="text" id="sobrenome" name="sobrenome" required placeholder="Seu sobrenome"/>
+        <label>Em memória de:</label>
+        <input type="text" name="em_memoria_de" placeholder="Nome (opcional)"/>
+      </div>
+      <div class="form-group">
+        <label>Para Refuá Shelemá de:</label>
+        <input type="text" name="refua_shlemá" placeholder="Nome (opcional)"/>
+      </div>
+      <div class="form-group">
+        <label>Mensagem adicional (opcional):</label>
+        <textarea name="mensagem_adicional" placeholder="Conte-nos mais..."></textarea>
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="data">Data</label>
-      <input type="date" id="data" name="data" required disabled style="opacity:.7;cursor:not-allowed"/>
+    <!-- DATA E PARASHÁ -->
+    <div class="form-section">
+      <div class="form-subtitle">Escolha a Data</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="data">Data desejada:</label>
+          <input type="date" id="data" name="data" required/>
+        </div>
+        <div class="form-group">
+          <label for="parasha">Parashá (opcional):</label>
+          <input type="text" id="parasha" name="parasha" placeholder="Nome da parashá"/>
+        </div>
+      </div>
     </div>
 
-    <button type="submit" class="submit-btn">Enviar</button>
+    <!-- CONTATO -->
+    <div class="form-section">
+      <div class="form-subtitle">Informações de Contato</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome"/>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required placeholder="+55 (11) 99999-9999"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required placeholder="seu@email.com"/>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Quero patrocinar um Kidush</button>
   </form>
 
   <div class="success-msg" id="successMsg">
-    <p>Mensagem enviada com sucesso!<br>Em breve entraremos em contato. 🕎</p>
+    <p>Mensagem enviada com sucesso!<br>Em breve entraremos em contato para confirmar os detalhes. 🕎</p>
+  </div>
+
+  <!-- GALERIA -->
+  <div class="gallery">
+    <h3 class="gallery-title">Galeria de Kidushim anteriores</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (3).jpeg" alt="Kidush 1"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="Kidush 2"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="Kidush 3"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (3).jpeg" alt="Kidush 4"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg" alt="Kidush 5"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="Kidush 6"/></div>
+    </div>
+  </div>
+
+  <!-- FRASE FINAL -->
+  <div class="closing">
+    "Que o mérito de fortalecer a vida judaica e proporcionar alegria à comunidade traga muitas bênçãos para você e sua família."
   </div>
 
 </div>
 
 <script>
-// Preencher data automaticamente com a data de hoje
-document.addEventListener('DOMContentLoaded', function() {
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2, '0');
-  const dd = String(today.getDate()).padStart(2, '0');
-  const dateString = `${yyyy}-${mm}-${dd}`;
-  document.getElementById('data').value = dateString;
-});
-
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', async function(e) {
   e.preventDefault();
