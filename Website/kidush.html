@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Faça seu Evento — Chai Menachem</title>
+<title>Kidush — Chai Menachem</title>
 <link rel="icon" type="image/png" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
 <style>
@@ -23,11 +23,6 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.15;color:#E8DFD0;margin-bottom:.6rem}
 .sec-title em{font-style:italic;color:#C4975A}
 .sec-body{font-size:.92rem;line-height:1.8;color:rgba(232,223,208,.6);margin-bottom:2.5rem}
-
-/* TIPOS DE EVENTO */
-.event-types{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.5rem}
-.event-chip{padding:.45rem 1.1rem;border:1px solid rgba(201,168,76,.3);background:transparent;color:rgba(232,223,208,.6);font-family:'DM Sans',sans-serif;font-size:.75rem;letter-spacing:.1em;cursor:pointer;transition:all .2s;border-radius:2px}
-.event-chip:hover,.event-chip.selected{background:rgba(201,168,76,.12);border-color:#C4975A;color:#C4975A}
 
 /* DIVIDER */
 .divider{display:flex;align-items:center;gap:1rem;margin:2rem 0}
@@ -70,24 +65,15 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 <div class="page">
 
   <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Chai Menachem · Higienópolis</span></div>
-  <h1 class="sec-title">Faça seu evento<br><em>na Chai Menachem</em></h1>
-  <p class="sec-body">Nosso espaço está disponível para celebrar os momentos mais sagrados da sua vida em família e comunidade. Entre em contato e vamos planejar juntos.</p>
-
-  <!-- TIPOS DE EVENTO -->
-  <div class="event-types" id="eventTypes">
-    <button type="button" class="event-chip" onclick="selectEvent(this,'Casamento')">Casamento</button>
-    <button type="button" class="event-chip" onclick="selectEvent(this,'Brit Milá')">Brit Milá</button>
-    <button type="button" class="event-chip" onclick="selectEvent(this,'Bat/Bar Mitzvá')">Bat/Bar Mitzvá</button>
-    <button type="button" class="event-chip" onclick="selectEvent(this,'Noivado')">Noivado</button>
-    <button type="button" class="event-chip" onclick="selectEvent(this,'Aufrif')">Aufrif</button>
-  </div>
+  <h1 class="sec-title">Solicite seu<br><em>Kidush</em></h1>
+  <p class="sec-body">O Kidush é uma bênção sobre o vinho que marca o início do Shabat e das festas judaicas. Solicite conosco para celebrar este momento especial em comunidade.</p>
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
 
   <!-- FORMULÁRIO -->
   <form id="contactForm" action="https://formspree.io/f/chaimenachemadm@gmail.com" method="POST">
-    <input type="hidden" name="_subject" id="emailSubject" value="Solicitação de Evento — Chai Menachem"/>
-    <input type="hidden" name="tipo_de_evento" id="tipoEvento" value=""/>
+    <input type="hidden" name="_subject" id="emailSubject" value="Solicitação de Kidush — Chai Menachem"/>
+    <input type="hidden" name="tipo_de_evento" id="tipoEvento" value="Kidush"/>
 
     <div class="form-row">
       <div class="form-group">
@@ -112,7 +98,7 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
     <div class="form-group">
       <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" required placeholder="Conte-nos mais sobre o seu evento..."></textarea>
+      <textarea id="mensagem" name="mensagem" required placeholder="Conte-nos mais sobre o seu kidush..."></textarea>
     </div>
 
     <button type="submit" class="submit-btn">Enviar</button>
@@ -125,14 +111,6 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 </div>
 
 <script>
-function selectEvent(el, name) {
-  document.querySelectorAll('.event-chip').forEach(c => c.classList.remove('selected'));
-  el.classList.add('selected');
-  document.getElementById('tipoEvento').value = name;
-  document.getElementById('emailSubject').value = name + ' — Chai Menachem';
-  document.getElementById('assunto').value = name;
-}
-
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', async function(e) {
   e.preventDefault();
