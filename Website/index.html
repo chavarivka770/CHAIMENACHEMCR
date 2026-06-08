@@ -70,10 +70,8 @@
 
 /* ── NAV TILES + SHABAT ── */
 .home-nav{background:var(--bg);border-top:1px solid var(--line)}
-.nav-section-inner{display:grid;grid-template-columns:1fr 300px;max-width:var(--maxw);margin:0 auto}
-@media(max-width:900px){.nav-section-inner{grid-template-columns:1fr}}
-.nav-tiles{display:grid;grid-template-columns:repeat(2,1fr);border-right:1px solid var(--line)}
-@media(max-width:900px){.nav-tiles{grid-template-columns:repeat(2,1fr);border-right:none}}
+.nav-section-inner{max-width:var(--maxw);margin:0 auto}
+.nav-tiles{display:grid;grid-template-columns:repeat(2,1fr)}
 @media(max-width:480px){.nav-tiles{grid-template-columns:1fr}}
 .nav-tile{display:flex;flex-direction:column;padding:2.4rem 2rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:inherit;position:relative;overflow:hidden;transition:background .3s;}
 .nav-tile:nth-child(2n){border-right:none}
@@ -90,12 +88,10 @@
 .nav-tile:hover .tile-arrow{transform:translateX(6px);opacity:1}
 
 /* ── REBE TILE ── */
-.rebe-tile{cursor:pointer;background:var(--bg-warm)}
-.rebe-tile:hover{background:rgba(176,130,58,.08)}
+.rebe-tile{cursor:pointer}
 
 /* ── SHABAT PANEL ── */
-.shabat-panel{padding:2.5rem 2rem;background:var(--bg-warm);position:sticky;top:72px;align-self:start}
-@media(max-width:900px){.shabat-panel{border-top:1px solid var(--line);position:static}}
+.shabat-panel{padding:2.4rem 2rem 2rem;background:var(--bg-warm);border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
 .shabat-panel-title{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);margin-bottom:.3rem}
 .shabat-panel-heb{font-family:'Frank Ruhl Libre',serif;font-size:.9rem;color:var(--muted);margin-bottom:1.5rem;letter-spacing:.06em}
 .shabat-row{display:flex;justify-content:space-between;align-items:baseline;padding:.75rem 0;border-bottom:1px solid var(--line);gap:1rem}
@@ -174,34 +170,36 @@
 <div class="rebe-modal" id="rebe-modal" onclick="if(event.target===this)closeRebe()">
   <div class="rebe-inner">
     <button class="rebe-close" onclick="closeRebe()">✕</button>
-    <img src="WhatsApp Image 2026-05-19 at 10.27.21 (4).jpeg" alt="O Rebe" class="rebe-photo">
+    <img src="WhatsApp Image 2026-05-19 at 10.11.39.jpeg" alt="O Rebe" class="rebe-photo">
     <div class="rebe-body">
       <div class="rebe-eyebrow">Nosso Líder Espiritual</div>
       <h2 class="rebe-title">O Rebe</h2>
       <div class="rebe-subtitle">Rabino Menachem Mendel Schneerson · 1902–1994</div>
 
-      <p class="rebe-text">O Lubavitcher Rebbe, Rabino Menachem Mendel Schneerson, foi o sétimo líder do movimento Chabad-Lubavitch. Nascido em Nikolaev, Ucrânia, estudou nas universidades de Berlim e Paris antes de assumir a liderança do Chabad em 1951, em Brooklyn, Nova York.</p>
-      <p class="rebe-text">Sob sua orientação, transformou um pequeno grupo chassídico numa presença mundial, com emissários em mais de 100 países — incluindo o Brasil. Sua mensagem era simples e profunda: <em>"Cada Judeu é uma vela. Acenda a sua e ela iluminará o mundo inteiro."</em></p>
+      <p class="rebe-text">O Lubavitcher Rebbe, Rabino Menachem Mendel Schneerson, foi o sétimo líder do movimento Chabad-Lubavitch e um dos maiores líderes espirituais do século XX. Nascido em Nikolaev, Ucrânia, em 18 de Nissan de 1902, era filho do Rav Levi Yitzchak Schneerson, renomado mestre da Torá.</p>
+      <p class="rebe-text">Ainda jovem, o Rebe demonstrou um domínio extraordinário de toda a Torá — Talmud, Halachá, Cabalá e Chassidut. Estudou engenharia elétrica nas universidades de Berlim e Paris, não por necessidade, mas para poder conectar-se com o mundo moderno e trazer D'us para ele. Em 1951, após o falecimento do Rebbe anterior, Rabbi Yosef Yitzchak Schneerson, assumiu a liderança do Chabad-Lubavitch em Crown Heights, Brooklyn.</p>
+      <p class="rebe-text">Sob sua liderança durante mais de quatro décadas, o Chabad cresceu de um pequeno movimento chassídico para uma presença mundial com emissários em mais de 100 países, incluindo o Brasil. O Rebe acreditava profundamente que cada Judeu — independentemente de seu nível de observância — possui uma chispa divina inextinguível. Ele enviava seus shluchim (emissários) para os lugares mais remotos do mundo, acendendo velas onde havia escuridão.</p>
+      <p class="rebe-text">O Rebe faleceu em 3 de Tamuz de 5754 (1994), deixando um legado eterno. Seu túmulo, o Ohel em Queens, Nova York, recebe centenas de milhares de visitantes por ano. Pessoas de todo o mundo continuam escrevendo cartas ao Rebe — e relatam receber respostas em forma de bênçãos e milagres.</p>
 
       <div class="rebe-story">
         <span class="rebe-story-title">✦ Os Dólares do Rebe</span>
-        Todo domingo, por décadas, o Rebe ficava em pé por seis, sete, às vezes oito horas — distribuindo um dólar a cada pessoa que passava, para ser doado à caridade. Cada pessoa recebia uma bênção pessoal, um olhar nos olhos. Dezenas de milhares passaram por ele. Nunca reclamou do cansaço. Dizia que eram os visitantes que lhe davam força.
-      </div>
-
-      <div class="rebe-story">
-        <span class="rebe-story-title">✦ A Carta do Soldado</span>
-        Um jovem soldado israelense escreveu ao Rebe na véspera de uma guerra, com medo de não voltar. O Rebe respondeu com uma única frase: <em>"Entre em ação com alegria e volte em paz."</em> O soldado voltou são e salvo. Guardou a carta pelo resto da vida.
+        Todo domingo, por décadas, o Rebe ficava em pé por seis, sete, às vezes oito horas — distribuindo um dólar a cada pessoa que passava, para ser doado à caridade. Cada pessoa recebia uma bênção pessoal, um olhar nos olhos, palavras que tocavam a alma. Presidentes, rabinos, crianças, pessoas simples — todos eram tratados com o mesmo amor. Dezenas de milhares passaram por ele. Nunca reclamou do cansaço. Dizia que eram os visitantes que lhe davam força.
       </div>
 
       <div class="rebe-story">
         <span class="rebe-story-title">✦ Nenhuma Alma é Pequena</span>
-        Um homem humilde foi visitar o Rebe e se desculpou, dizendo ser apenas uma pessoa simples, sem grande aprendizado. O Rebe olhou para ele e respondeu: <em>"Cada Judeu possui uma neshamá — uma alma — que é uma parte literal de D'us. Não existe uma alma pequena."</em>
+        Um homem humilde foi visitar o Rebe e se desculpou, dizendo ser apenas uma pessoa simples, sem grande aprendizado. O Rebe olhou para ele com profundidade e respondeu: <em>"Cada Judeu possui uma neshamá — uma alma — que é uma parte literal de D'us. Não existe uma alma pequena."</em> O homem saiu transformado.
+      </div>
+
+      <div class="rebe-story">
+        <span class="rebe-story-title">✦ A Criança e o Rebe</span>
+        Uma mãe trouxe seu filho de cinco anos para receber uma bênção. O menino estava com medo e começou a chorar. O Rebe se abaixou até o nível do garoto, olhou em seus olhos com ternura e sussurrou: <em>"Não tenha medo. D'us está sempre com você."</em> O menino parou de chorar imediatamente — e nunca esqueceu aquele olhar pelo resto de sua vida.
       </div>
 
       <div class="rebe-divider"><div class="rebe-divider-line"></div><span class="rebe-divider-star">✦</span><div class="rebe-divider-line"></div></div>
 
       <h3 class="rebe-form-title">Escreva pro Rebe</h3>
-      <p class="rebe-form-sub">Junte-se a milhares de judeus ao redor do mundo que escrevem ao Rebe. Sua mensagem será encaminhada pela Chai Menachem.</p>
+      <p class="rebe-form-sub">Junte-se a milhares de judeus ao redor do mundo que enviam cartas ao Rebe. A Chai Menachem encaminhará sua carta.</p>
 
       <form id="rebe-form" class="rebe-form">
         <div class="rebe-form-row">
@@ -215,17 +213,10 @@
           </div>
         </div>
         <div class="fg">
-          <label>Telefone (WhatsApp)</label>
+          <label>Número (WhatsApp)</label>
           <input type="tel" name="telefone" placeholder="+55 (11) 99999-9999" required>
         </div>
-        <div class="fg">
-          <label>Sua mensagem ao Rebe</label>
-          <textarea name="mensagem" placeholder="Escreva aqui o que gostaria de dizer ou pedir ao Rebe..."></textarea>
-        </div>
-        <button type="submit" class="rebe-submit">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:.4rem"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Enviar pelo WhatsApp
-        </button>
+        <button type="submit" class="rebe-submit">Enviar</button>
       </form>
     </div>
   </div>
@@ -343,7 +334,7 @@
 <!-- NAVIGATION TILES + SHABAT PANEL -->
 <section class="home-nav">
   <div class="nav-section-inner">
-    <div class="nav-tiles">
+    <div class="nav-tiles" id="nav-tiles-grid">
 
       <!-- 01 SOBRE -->
       <a href="sobre.html" class="nav-tile reveal">
@@ -422,10 +413,8 @@
         <span class="tile-arrow">→</span>
       </div>
 
-    </div><!-- end nav-tiles -->
-
-    <!-- SHABAT PANEL -->
-    <aside class="shabat-panel">
+      <!-- 08 SHABAT PANEL (fills empty spot next to REBE tile) -->
+      <aside class="shabat-panel nav-tile" style="cursor:default;display:flex;flex-direction:column;padding:2.4rem 2rem 2rem">
       <h3 class="shabat-panel-title">Horários de Shabat</h3>
       <div class="shabat-panel-heb">שַׁבָּת קֹדֶשׁ</div>
       <div class="shabat-row">
@@ -462,6 +451,7 @@
       </a>
     </aside>
 
+    </div><!-- end nav-tiles -->
   </div>
 </section>
 
@@ -532,12 +522,10 @@ document.getElementById('rebe-form').addEventListener('submit',function(e){
   const nome=this.querySelector('[name="nome"]').value.trim();
   const sobrenome=this.querySelector('[name="sobrenome"]').value.trim();
   const telefone=this.querySelector('[name="telefone"]').value.trim();
-  const mensagem=this.querySelector('[name="mensagem"]').value.trim();
   if(!nome||!telefone){alert('Por favor preencha seu nome e telefone.');return;}
-  let msg='✉️ *Carta ao Rebe — Chai Menachem*\n\n';
+  let msg='✉️ *Quero escrever uma carta para o Rebe — Chai Menachem*\n\n';
   msg+='👤 *Nome:* '+nome+(sobrenome?' '+sobrenome:'')+'\n';
-  msg+='📞 *Telefone:* '+telefone+'\n';
-  if(mensagem)msg+='\n✍️ *Mensagem ao Rebe:*\n'+mensagem+'\n';
+  msg+='📞 *Número:* '+telefone+'\n';
   window.open('https://api.whatsapp.com/send?phone=5511991969797&text='+encodeURIComponent(msg),'_blank');
 });
 
