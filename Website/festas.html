@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -77,6 +77,13 @@
     <button class="hamburger" id="hamburger" onclick="openMenu()"><span></span><span></span><span></span></button>
   </div>
 </header>
+<!-- BACK BUTTON -->
+<div style="max-width:var(--maxw);margin:0 auto;padding:.8rem clamp(1.4rem,5vw,3rem) 0">
+  <a href="index.html" onclick="if(history.length>1){event.preventDefault();history.back()}" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--muted);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Voltar
+  </a>
+</div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
