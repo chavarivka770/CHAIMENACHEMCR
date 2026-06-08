@@ -21,7 +21,7 @@
 .intro-skip:hover{border-color:var(--gold);color:var(--gold)}
 
 /* ── HERO ── */
-.home-hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem clamp(1.4rem,5vw,3rem) 6rem;gap:1.8rem;position:relative;overflow:hidden;background:linear-gradient(rgba(250,248,242,.93) 0%,rgba(250,248,242,.88) 50%,rgba(236,228,212,.96) 100%),url('WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg') center/cover no-repeat;}
+.home-hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem clamp(1.4rem,5vw,3rem) 6rem;gap:1.8rem;position:relative;overflow:hidden;background:linear-gradient(rgba(250,248,242,.72) 0%,rgba(250,248,242,.60) 50%,rgba(236,228,212,.78) 100%),url('WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg') center/cover no-repeat;}
 .home-hero::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:80px;background:linear-gradient(to bottom,transparent,var(--gold));opacity:.5}
 .home-hero .eyebrow{justify-content:center;position:relative;z-index:1}
 .home-hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(3.2rem,10vw,7.5rem);line-height:1.02;letter-spacing:-.018em;color:var(--ink);max-width:15ch;position:relative;z-index:1;}
@@ -53,16 +53,16 @@
 .pix-copied{color:var(--gold);font-size:.82rem;margin-top:.8rem;display:none;font-weight:500}
 .pix-note{font-size:.78rem;color:var(--muted);margin-top:1.2rem;line-height:1.6}
 
-/* ── NAV OVERRIDES (bigger — sobrepõe nova.css) ── */
+/* ── NAV OVERRIDES (bigger, fill space) ── */
 .page-nav{padding:1.1rem clamp(1.4rem,5vw,3rem) !important}
-.nav-links{gap:3rem !important}
+.nav-links{flex:1 !important;justify-content:space-evenly !important;gap:0 !important;margin:0 2rem !important}
 .nav-links a{font-size:1.05rem !important;font-weight:500 !important;letter-spacing:.02em !important}
 
 /* ── SINAGOGA SLIDER ── */
-.sinagoga-slider{position:relative;width:100%;height:72vh;min-height:380px;overflow:hidden;background:var(--bg-warm)}
-.slide-item{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.sinagoga-slider{position:relative;width:100%;height:72vh;min-height:380px;overflow:hidden;background:#1a1713}
+.slide-item{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;display:flex;align-items:center;justify-content:center}
 .slide-item.active{opacity:1}
-.slide-item img{width:100%;height:100%;object-fit:cover;display:block}
+.slide-item img{width:100%;height:100%;object-fit:contain;display:block}
 .slide-caption{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(28,24,19,.45);padding:.45rem 1.2rem;backdrop-filter:blur(4px);white-space:nowrap}
 .slide-dots{position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:2}
 .slide-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:background .3s,transform .3s;padding:0}
@@ -170,7 +170,7 @@
 <div class="rebe-modal" id="rebe-modal" onclick="if(event.target===this)closeRebe()">
   <div class="rebe-inner">
     <button class="rebe-close" onclick="closeRebe()">✕</button>
-    <img src="WhatsApp Image 2026-05-19 at 10.11.39.jpeg" alt="O Rebe" class="rebe-photo">
+    <img src="rebe.jpeg" alt="O Rebe" class="rebe-photo" onerror="this.src='WhatsApp Image 2026-05-19 at 10.11.39.jpeg'">
     <div class="rebe-body">
       <div class="rebe-eyebrow">Nosso Líder Espiritual</div>
       <h2 class="rebe-title">O Rebe</h2>
@@ -290,7 +290,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
       Doar via PIX
     </button>
-    <a href="kidush.html" class="btn btn-ghost">Reservar Kidush</a>
+    <a href="kidush.html" class="btn btn-ghost">Faça seu Kidush conosco</a>
   </div>
 </section>
 
@@ -584,9 +584,18 @@ async function loadData(){
     // Parasha
     const ev=items.find(i=>i.category==='parashat');
     if(ev){
-      const raw=ev.title.replace('Parashat ','').replace('Parasha ','').replace(/'/g,"'");
-      const nk=raw.replace(/['']/g,'');
-      const info=PARASHIOT[raw]||PARASHIOT[nk]||PARASHIOT[raw.replace('-',' ')]||{pt:raw,heb:'',s:''};
+      // Normalize: strip prefix, normalize apostrophes, trim
+      const raw=ev.title
+        .replace(/^Parashat\s+/i,'').replace(/^Parasha\s+/i,'')
+        .replace(/[‘’ʼ`]/g,"'").trim();
+      // Try multiple key variants
+      const variants=[raw, raw.replace(/'/g,''), raw.replace(/-/g,' '), raw.replace(/\s+/g,'-')];
+      let info=null;
+      for(const v of variants){if(PARASHIOT[v]){info=PARASHIOT[v];break;}}
+      // Case-insensitive fallback
+      if(!info){const lo=raw.toLowerCase();const k=Object.keys(PARASHIOT).find(k=>k.toLowerCase()===lo);if(k)info=PARASHIOT[k];}
+      if(!info)info={pt:raw,heb:'',s:''};
+      const heb=ev.hebrew?ev.hebrew.replace('פרשת ','').trim():info.heb;
       const heb=ev.hebrew?ev.hebrew.replace('פרשת ','').trim():info.heb;
       document.getElementById('parasha-name').textContent=info.pt;
       document.getElementById('parasha-hebrew').textContent=heb;
