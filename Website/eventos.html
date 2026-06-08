@@ -85,34 +85,33 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
 
   <!-- FORMULÁRIO -->
-  <form id="contactForm" action="https://formspree.io/f/chaimenachemadm@gmail.com" method="POST">
-    <input type="hidden" name="_subject" id="emailSubject" value="Solicitação de Evento — Chai Menachem"/>
-    <input type="hidden" name="tipo_de_evento" id="tipoEvento" value=""/>
+  <form id="contactForm">
+    <input type="hidden" id="tipoEvento" value=""/>
 
     <div class="form-row">
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required placeholder="Seu nome"/>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome"/>
       </div>
       <div class="form-group">
         <label for="sobrenome">Sobrenome</label>
-        <input type="text" id="sobrenome" name="sobrenome" required placeholder="Seu sobrenome"/>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome"/>
       </div>
     </div>
 
     <div class="form-group">
       <label for="telefone">Telefone</label>
-      <input type="tel" id="telefone" name="telefone" required placeholder="+55 (11) 99999-9999"/>
+      <input type="tel" id="telefone" name="telefone" placeholder="+55 (11) 99999-9999"/>
     </div>
 
     <div class="form-group">
       <label for="assunto">Assunto</label>
-      <input type="text" id="assunto" name="assunto" required placeholder="Descreva brevemente"/>
+      <input type="text" id="assunto" name="assunto" placeholder="Descreva brevemente"/>
     </div>
 
     <div class="form-group">
       <label for="mensagem">Mensagem</label>
-      <textarea id="mensagem" name="mensagem" required placeholder="Conte-nos mais sobre o seu evento..."></textarea>
+      <textarea id="mensagem" name="mensagem" placeholder="Conte-nos mais sobre o seu evento..."></textarea>
     </div>
 
     <button type="submit" class="submit-btn">Enviar</button>
@@ -133,17 +132,28 @@ function selectEvent(el, name) {
   document.getElementById('assunto').value = name;
 }
 
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', async function(e) {
+document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const data = new FormData(form);
-  const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
-  if (res.ok) {
-    form.style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-  } else {
-    alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+  const nome      = document.getElementById('nome').value.trim();
+  const sobrenome = document.getElementById('sobrenome').value.trim();
+  const telefone  = document.getElementById('telefone').value.trim();
+  const assunto   = document.getElementById('assunto').value.trim();
+  const mensagem  = document.getElementById('mensagem').value.trim();
+  const tipo      = document.getElementById('tipoEvento').value;
+
+  if (!nome || !telefone) {
+    alert('Por favor preencha seu nome e telefone.');
+    return;
   }
+
+  let msg = '🎉 *Solicitação de Evento — Chai Menachem*\n\n';
+  msg += '👤 *Nome:* ' + nome + (sobrenome ? ' ' + sobrenome : '') + '\n';
+  msg += '📞 *Telefone:* ' + telefone + '\n';
+  if (tipo)     msg += '📌 *Tipo de evento:* ' + tipo + '\n';
+  if (assunto)  msg += '📋 *Assunto:* ' + assunto + '\n';
+  if (mensagem) msg += '💬 *Mensagem:* ' + mensagem + '\n';
+
+  window.location.href = 'https://api.whatsapp.com/send?phone=5511991969797&text=' + encodeURIComponent(msg);
 });
 </script>
 

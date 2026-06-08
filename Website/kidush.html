@@ -79,6 +79,9 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
 .type-btn:hover{background:rgba(201,168,76,.1);border-color:#C4975A}
 .type-btn.selected{background:rgba(201,168,76,.2);border-color:#C4975A;color:#E8C870}
+.motivo-btn{padding:.75rem 1rem;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.2);color:rgba(232,223,208,.75);font-family:'DM Sans',sans-serif;font-size:.82rem;letter-spacing:.08em;cursor:pointer;transition:all .25s;border-radius:2px;text-align:center}
+.motivo-btn:hover{background:rgba(201,168,76,.1);border-color:#C4975A;color:#E8DFD0}
+.motivo-btn.selected{background:rgba(201,168,76,.18);border-color:#C4975A;color:#C4975A;font-weight:500}
 </style>
 <link rel="stylesheet" href="shared.css"/>
 </head>
@@ -128,27 +131,6 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
 
-  <!-- TIPOS DE KIDUSH -->
-  <div>
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1.5rem;text-align:center">Tipos de Kidush</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:700px;margin:0 auto">
-      <button type="button" onclick="selectType(this,'Kidush Básico')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px">
-        <div style="font-weight:600;margin-bottom:.4rem">Kidush Básico</div>
-        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Bolos, bebidas, café e chá</div>
-      </button>
-      <button type="button" onclick="selectType(this,'Kidush Completo')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px">
-        <div style="font-weight:600;margin-bottom:.4rem">Kidush Completo</div>
-        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Salgados, doces e opções especiais</div>
-      </button>
-      <button type="button" onclick="selectType(this,'Kidush Especial')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px">
-        <div style="font-weight:600;margin-bottom:.4rem">Kidush Especial</div>
-        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Personalizado conforme sua preferência</div>
-      </button>
-    </div>
-  </div>
-
-  <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
-
   <!-- CARDÁPIO -->
   <div style="text-align:center;padding:2rem;background:rgba(201,168,76,.03);border:1px solid rgba(201,168,76,.15);border-radius:2px">
     <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1rem">Escolha o cardápio</h3>
@@ -157,21 +139,69 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 
   <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
 
+  <!-- TIPOS DE KIDUSH -->
+  <div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#C4975A;margin-bottom:1.5rem;text-align:center">Tipos de Kidush</h3>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;max-width:700px;margin:0 auto">
+      <button type="button" onclick="selectType(this,'Básico — Sexta-feira à noite')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px;text-align:center">
+        <div style="font-weight:600;margin-bottom:.4rem">Kidush Básico</div>
+        <div style="font-size:.75rem;color:rgba(201,168,76,.6);margin-bottom:.5rem;letter-spacing:.06em">Sexta-feira à noite</div>
+        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Kabbalat Shabat com a comunidade</div>
+      </button>
+      <button type="button" onclick="selectType(this,'Especial — Sábado de manhã')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px;text-align:center">
+        <div style="font-weight:600;margin-bottom:.4rem">Kidush Especial</div>
+        <div style="font-size:.75rem;color:rgba(201,168,76,.6);margin-bottom:.5rem;letter-spacing:.06em">Sábado de manhã</div>
+        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Após a Tefila da manhã de Shabat</div>
+      </button>
+      <button type="button" onclick="selectType(this,'Kidush Completo com Tscholent — Sábado de manhã')" class="type-btn" style="padding:1.2rem;background:rgba(201,168,76,.05);border:2px solid rgba(201,168,76,.2);color:#C4975A;font-family:'DM Sans',sans-serif;font-size:.9rem;cursor:pointer;transition:all .3s;border-radius:2px;text-align:center;grid-column:1/-1;max-width:calc(50% - .3rem);margin:0 auto;width:100%">
+        <div style="font-weight:600;margin-bottom:.4rem">Kidush Completo</div>
+        <div style="font-size:.75rem;color:rgba(201,168,76,.6);margin-bottom:.5rem;letter-spacing:.06em">Sábado de manhã · com Tscholent</div>
+        <div style="font-size:.8rem;color:rgba(232,223,208,.65)">Inclui Tscholent e pratos quentes</div>
+      </button>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><span class="divider-star">✦</span><div class="divider-line"></div></div>
+
   <!-- FORMULÁRIO -->
-  <form id="contactForm" action="https://formspree.io/f/chaimenachemadm@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="Solicitação de Kidush — Chai Menachem"/>
+  <form id="contactForm">
     <input type="hidden" id="tipoKidush" name="tipo_kidush" value=""/>
+
+    <!-- CONTATO -->
+    <div class="form-section">
+      <div class="form-subtitle">Informações de Contato</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome"/>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="+55 (11) 99999-9999"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com"/>
+      </div>
+    </div>
 
     <!-- HOMENAGEM -->
     <div class="form-section">
       <div class="form-subtitle">Homenagem</div>
-      <div class="form-group">
-        <label>Em honra de:</label>
-        <input type="text" name="em_honra_de" placeholder="Nome (opcional)"/>
+      <div class="form-group" style="margin-bottom:1rem">
+        <label>Motivo:</label>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-top:.6rem">
+          <button type="button" onclick="selectMotivo(this,'Em honra de')" class="motivo-btn">Em honra de</button>
+          <button type="button" onclick="selectMotivo(this,'Em memória de')" class="motivo-btn">Em memória de</button>
+          <button type="button" onclick="selectMotivo(this,'Comemoração')" class="motivo-btn">Comemoração</button>
+          <button type="button" onclick="selectMotivo(this,'Outro')" class="motivo-btn">Outro</button>
+        </div>
+        <input type="hidden" name="motivo" id="motivoInput"/>
       </div>
       <div class="form-group">
-        <label>Em memória de:</label>
-        <input type="text" name="em_memoria_de" placeholder="Nome (opcional)"/>
+        <label>Nome homenageado (opcional):</label>
+        <input type="text" name="homenageado" placeholder="Nome"/>
       </div>
       <div class="form-group">
         <label>Mensagem adicional (opcional):</label>
@@ -182,32 +212,30 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
     <!-- DATA -->
     <div class="form-section">
       <div class="form-subtitle">Escolha a Data</div>
-      <div class="form-group">
-        <label for="data">Data desejada:</label>
-        <input type="date" id="data" name="data" required/>
+      <input type="hidden" id="data" name="data" required/>
+      <div style="display:flex;gap:.8rem;align-items:center">
+        <div class="form-group" style="flex:1">
+          <label>Dia</label>
+          <select id="sel-dia" name="data_dia" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#E8DFD0;font-family:'DM Sans',sans-serif;font-size:.9rem;padding:.75rem 1rem;outline:none;width:100%;border-radius:2px;cursor:pointer">
+            <option value="">Dia</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:1">
+          <label>Mês</label>
+          <select id="sel-mes" name="data_mes" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#E8DFD0;font-family:'DM Sans',sans-serif;font-size:.9rem;padding:.75rem 1rem;outline:none;width:100%;border-radius:2px;cursor:pointer">
+            <option value="">Mês</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:1">
+          <label>Ano</label>
+          <select id="sel-ano" name="data_ano" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#E8DFD0;font-family:'DM Sans',sans-serif;font-size:.9rem;padding:.75rem 1rem;outline:none;width:100%;border-radius:2px;cursor:pointer">
+            <option value="">Ano</option>
+          </select>
+        </div>
       </div>
     </div>
 
-    <!-- CONTATO -->
-    <div class="form-section">
-      <div class="form-subtitle">Informações de Contato</div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required placeholder="Seu nome"/>
-        </div>
-        <div class="form-group">
-          <label for="telefone">Telefone:</label>
-          <input type="tel" id="telefone" name="telefone" required placeholder="+55 (11) 99999-9999"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required placeholder="seu@email.com"/>
-      </div>
-    </div>
-
-    <button type="submit" class="submit-btn">Quero patrocinar um Kidush</button>
+    <button type="submit" class="submit-btn">Enviar</button>
   </form>
 
   <div class="success-msg" id="successMsg">
@@ -218,12 +246,10 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
   <div class="gallery">
     <h3 class="gallery-title">Galeria de Kidushim anteriores</h3>
     <div class="gallery-grid">
-      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (3).jpeg" alt="Kidush 1"/></div>
-      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="Kidush 2"/></div>
-      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="Kidush 3"/></div>
-      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20 (3).jpeg" alt="Kidush 4"/></div>
-      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg" alt="Kidush 5"/></div>
-      <div class="gallery-item"><img src="WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="Kidush 6"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-06-08 at 09.14.21 (8).jpeg" alt="Kidush 1"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-06-08 at 09.14.21 (10).jpeg" alt="Kidush 2"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-06-08 at 09.14.21 (12).jpeg" alt="Kidush 3"/></div>
+      <div class="gallery-item"><img src="WhatsApp Image 2026-06-08 at 09.14.21 (13).jpeg" alt="Kidush 4"/></div>
     </div>
   </div>
 
@@ -235,23 +261,88 @@ html,body{background:#0A0705;color:#E8DFD0;font-family:'DM Sans',sans-serif;-web
 </div>
 
 <script>
+(function() {
+  const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  const today = new Date();
+  const selDia = document.getElementById('sel-dia');
+  const selMes = document.getElementById('sel-mes');
+  const selAno = document.getElementById('sel-ano');
+
+  // Dias 1-31
+  for (let d = 1; d <= 31; d++) {
+    const o = document.createElement('option');
+    o.value = String(d).padStart(2,'0');
+    o.textContent = d;
+    selDia.appendChild(o);
+  }
+
+  // Meses
+  meses.forEach((m, i) => {
+    const o = document.createElement('option');
+    o.value = String(i+1).padStart(2,'0');
+    o.textContent = m;
+    selMes.appendChild(o);
+  });
+
+  // Anos (atual + 2)
+  for (let y = today.getFullYear(); y <= today.getFullYear() + 2; y++) {
+    const o = document.createElement('option');
+    o.value = y;
+    o.textContent = y;
+    selAno.appendChild(o);
+  }
+
+  function sync() {
+    const d = selDia.value, m = selMes.value, a = selAno.value;
+    document.getElementById('data').value = (d && m && a) ? a+'-'+m+'-'+d : '';
+  }
+  selDia.onchange = selMes.onchange = selAno.onchange = sync;
+})();
+
+function selectMotivo(el, motivo) {
+  document.querySelectorAll('.motivo-btn').forEach(btn => btn.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('motivoInput').value = motivo;
+}
 function selectType(el, type) {
   document.querySelectorAll('.type-btn').forEach(btn => btn.classList.remove('selected'));
   el.classList.add('selected');
   document.getElementById('tipoKidush').value = type;
 }
 
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', async function(e) {
+document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const data = new FormData(form);
-  const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
-  if (res.ok) {
-    form.style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
-  } else {
-    alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+  const nome     = document.getElementById('nome').value.trim();
+  const telefone = document.getElementById('telefone').value.trim();
+  const email    = document.getElementById('email').value.trim();
+  const motivo   = document.getElementById('motivoInput').value;
+  const homenageado = document.querySelector('[name="homenageado"]').value.trim();
+  const mensagem = document.querySelector('[name="mensagem_adicional"]').value.trim();
+  const tipo     = document.getElementById('tipoKidush').value;
+  const dia      = document.getElementById('sel-dia').value;
+  const mes      = document.getElementById('sel-mes').value;
+  const ano      = document.getElementById('sel-ano').value;
+
+  if (!nome || !telefone) {
+    alert('Por favor preencha seu nome e telefone.');
+    return;
   }
+
+  const meses = ['','Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  const dataFormatada = dia + ' de ' + meses[parseInt(mes)] + ' de ' + ano;
+
+  let msg = '🕎 *Solicitação de Kidush — Chai Menachem*\n\n';
+  msg += '👤 *Nome:* ' + nome + '\n';
+  msg += '📞 *Telefone:* ' + telefone + '\n';
+  if (email) msg += '📧 *E-mail:* ' + email + '\n';
+  msg += '\n📅 *Data:* ' + dataFormatada + '\n';
+  if (tipo) msg += '🍷 *Tipo:* ' + tipo + '\n';
+  if (motivo) msg += '\n✨ *Motivo:* ' + motivo + '\n';
+  if (homenageado) msg += '👤 *Homenageado:* ' + homenageado + '\n';
+  if (mensagem) msg += '💬 *Mensagem:* ' + mensagem + '\n';
+
+  const url = 'https://api.whatsapp.com/send?phone=5511991969797&text=' + encodeURIComponent(msg);
+  window.location.href = url;
 });
 </script>
 
