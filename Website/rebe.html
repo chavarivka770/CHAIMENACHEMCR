@@ -8,7 +8,7 @@
 <style>
 .rebe-page{max-width:720px;margin:0 auto;padding:4rem clamp(1.4rem,5vw,3rem) 6rem}
 .rebe-photo-wrap{width:100%;margin-bottom:2.5rem;background:#fff;border:1px solid var(--line)}
-.rebe-photo-wrap img{width:100%;max-height:520px;object-fit:contain;display:block}
+.rebe-photo-wrap img{max-width:100%;max-height:520px;object-fit:contain;display:block;margin:0 auto}
 .rebe-eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
 .rebe-title{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--ink);line-height:1.05;margin-bottom:.3rem}
 .rebe-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:2rem;letter-spacing:.04em}
@@ -86,7 +86,10 @@
 <div class="rebe-page">
 
   <div class="rebe-photo-wrap reveal">
-    <img src="Lubavitcher Rebbe (182) (1).avif" alt="O Rebe — Lubavitcher Rebbe" onerror="this.src='WhatsApp Image 2026-05-19 at 10.27.21 (4).jpeg'">
+    <picture>
+      <source srcset="Lubavitcher Rebbe (182) (1).avif" type="image/avif">
+      <img src="rebe.jpg" alt="O Rebe — Lubavitcher Rebbe">
+    </picture>
   </div>
 
   <p class="rebe-text reveal">O Lubavitcher Rebbe, Rabino Menachem Mendel Schneerson, foi o sétimo líder do movimento Chabad-Lubavitch e um dos maiores líderes espirituais do século XX. Nascido em Nikolaev, Ucrânia, em 18 de Nissan de 1902, era filho do Rav Levi Yitzchak Schneerson, renomado mestre da Torá.</p>
