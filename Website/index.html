@@ -331,7 +331,7 @@
   <div class="parasha-heb" id="parasha-hebrew"></div>
   <div class="parasha-divider"></div>
   <p class="parasha-summary-el" id="parasha-summary"></p>
-  <a id="parasha-link" href="https://br.chabad.org/parasha" target="_blank" rel="noopener" class="parasha-link" style="pointer-events:auto;cursor:pointer">Leia mais no Chabad.org →</a>
+  <a id="parasha-link" href="https://www.chabad.org/parasha" target="_blank" rel="noopener" class="parasha-link" style="pointer-events:auto;cursor:pointer">Leia mais no Chabad.org →</a>
 </div>
 
 <!-- NAVIGATION TILES + SHABAT PANEL -->
@@ -603,7 +603,7 @@ async function loadData(){
       document.getElementById('parasha-hebrew').textContent=heb;
       document.getElementById('parasha-summary').textContent=info.s||'';
       // Fix link — always use Portuguese Chabad
-      document.getElementById('parasha-link').href='https://br.chabad.org/parasha';
+      document.getElementById('parasha-link').href='https://www.chabad.org/parasha';
       // Shabat panel parasha
       const pnSmall=document.getElementById('parasha-name-small');
       if(pnSmall){pnSmall.textContent=info.pt;document.getElementById('parasha-shabat-row').style.display='flex';}
