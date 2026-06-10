@@ -243,7 +243,7 @@
 <!-- HEADER -->
 <header class="page-nav">
   <a class="brand" href="index.html">
-    <span class="brand-mark"><img src="logo-transparent.png" alt="Chai Menachem" style="height:220px!important;width:220px!important"></span>
+    <span class="brand-mark"><img src="logo-transparent.png" alt="Chai Menachem" style="height:110px!important;width:110px!important"></span>
   </a>
   <nav class="nav-links">
     <a href="sobre.html">Sobre</a>
@@ -586,6 +586,18 @@ async function loadData(){
   }catch(e){console.log('Hebcal error',e)}
 }
 loadData();
+
+/* ── HIDE NAV ON SCROLL DOWN ── */
+(function(){
+  const nav=document.querySelector('.page-nav');
+  let last=0;
+  window.addEventListener('scroll',function(){
+    const y=window.scrollY;
+    if(y>last&&y>100){nav.classList.add('nav-hidden');}
+    else{nav.classList.remove('nav-hidden');}
+    last=y;
+  },{passive:true});
+})();
 </script>
 </body>
 </html>
