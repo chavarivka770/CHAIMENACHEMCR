@@ -54,18 +54,15 @@ img{display:block;max-width:100%}
 
 /* ── STICKY HEADER ── */
 .page-nav{
-  position:fixed;top:0;left:0;right:0;z-index:50;
+  position:sticky;top:0;z-index:50;
   display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
   padding:1rem clamp(1.4rem,5vw,3rem);
   background:rgba(250,248,242,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--line);
-  transition:transform .35s ease;
 }
-.page-nav.nav-hidden{transform:translateY(-100%)}
-body{padding-top:80px}
 .brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.brand-mark{height:300px;flex-shrink:0;display:flex;align-items:center}
-.brand-mark img{height:300px;width:auto;display:block;filter:url(#gold-soft)}
+.brand-mark{height:100px;flex-shrink:0;display:flex;align-items:center}
+.brand-mark img{height:100px;width:auto;display:block;filter:url(#gold-soft)}
 .nav-links{display:flex;flex:1;align-items:center;justify-content:space-evenly;gap:0;margin:0 2rem}
 .nav-links a{
   font-size:1.05rem;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);
