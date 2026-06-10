@@ -61,8 +61,8 @@ img{display:block;max-width:100%}
   border-bottom:1px solid var(--line);
 }
 .brand{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
-.brand-mark{height:120px;flex-shrink:0;display:flex;align-items:center}
-.brand-mark img{height:120px;width:auto;display:block;filter:url(#gold-soft)}
+.brand-mark{height:300px;flex-shrink:0;display:flex;align-items:center}
+.brand-mark img{height:300px;width:auto;display:block;filter:url(#gold-soft)}
 .nav-links{display:flex;flex:1;align-items:center;justify-content:space-evenly;gap:0;margin:0 2rem}
 .nav-links a{
   font-size:1.05rem;font-weight:500;letter-spacing:.02em;color:var(--ink-soft);
