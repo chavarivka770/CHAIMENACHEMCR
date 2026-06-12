@@ -21,12 +21,13 @@
 .intro-skip:hover{border-color:var(--gold);color:var(--gold)}
 
 /* ── HERO ── */
-.home-hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem clamp(1.4rem,5vw,3rem) 6rem;gap:1.8rem;position:relative;overflow:hidden;background:linear-gradient(rgba(250,248,242,.72) 0%,rgba(250,248,242,.60) 50%,rgba(236,228,212,.78) 100%),url('WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg') center/cover no-repeat;}
-.home-hero::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:80px;background:linear-gradient(to bottom,transparent,var(--gold));opacity:.5}
+.home-hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem clamp(1.4rem,5vw,3rem) 6rem;gap:1.8rem;position:relative;overflow:hidden;background:radial-gradient(ellipse 90% 70% at 50% 22%,rgba(255,248,220,.18) 0%,transparent 58%),linear-gradient(rgba(250,248,242,.62) 0%,rgba(250,248,242,.48) 45%,rgba(236,228,212,.85) 100%),url('WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg') center/cover no-repeat;}
+.home-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 48% at 50% 26%,rgba(176,130,58,.09) 0%,transparent 62%);pointer-events:none;z-index:0}
+.home-hero::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:80px;background:linear-gradient(to bottom,transparent,var(--gold));opacity:.5;z-index:1}
 .home-hero .eyebrow{justify-content:center;position:relative;z-index:1}
 .home-hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(3.2rem,10vw,7.5rem);line-height:1.02;letter-spacing:-.018em;color:var(--ink);max-width:15ch;position:relative;z-index:1;}
-.home-hero h1 .accent{font-style:italic;background:linear-gradient(90deg,var(--gold) 0%,#e8c885 40%,var(--gold) 60%,var(--gold) 100%);background-size:250% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s linear 3s infinite;}
-@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+.home-hero h1 .accent{font-style:italic;background:linear-gradient(105deg,#6B4E0E 0%,#C49A45 22%,#F0DC96 48%,#E8C870 52%,#C49A45 78%,#6B4E0E 100%);background-size:280% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 22px rgba(176,130,58,.30));animation:goldShine 5s cubic-bezier(.4,0,.6,1) 3.2s infinite;}
+@keyframes goldShine{0%,100%{background-position:0% center;filter:drop-shadow(0 2px 14px rgba(176,130,58,.18))}50%{background-position:100% center;filter:drop-shadow(0 2px 36px rgba(196,151,90,.55))}}
 .hero-line{width:60px;height:1px;background:var(--gold);margin:-.4rem auto 0;opacity:0;animation:fadeUp .8s var(--ease) 2.2s both}
 .slogan{font-size:clamp(1.05rem,1.7vw,1.3rem);color:var(--ink-soft);font-weight:300;line-height:1.7;max-width:44ch;position:relative;z-index:1}
 .home-hero .cta-band{justify-content:center}
@@ -53,8 +54,24 @@
 .pix-copied{color:var(--gold);font-size:.82rem;margin-top:.8rem;display:none;font-weight:500}
 .pix-note{font-size:.78rem;color:var(--muted);margin-top:1.2rem;line-height:1.6}
 
+/* ── HERO WELCOME LINE ── */
+.hero-welcome-line{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.1rem,2.8vw,2rem);color:var(--ink-soft);font-weight:400;display:block;margin-bottom:.3rem;letter-spacing:.01em}
+
+/* ── HERO DIVIDER ── */
+.hero-divider{background:var(--bg);padding:3.5rem clamp(1.4rem,5vw,3rem);display:flex;align-items:center;justify-content:center}
+.hero-divider-inner{display:flex;align-items:center;gap:1.5rem;width:100%;max-width:380px}
+.hero-divider-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(176,130,58,.45),transparent)}
+.hero-divider-star{color:var(--gold);font-size:.7rem;opacity:.55;letter-spacing:.3em}
+
+/* ── SLIDER LUMINOUS OVERLAY ── */
+.slide-half{position:relative}
+.slide-half::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 35%,rgba(255,248,220,.10) 0%,transparent 65%),linear-gradient(to bottom,rgba(176,130,58,.05) 0%,transparent 25%,transparent 75%,rgba(176,130,58,.10) 100%);pointer-events:none;z-index:1}
+
 /* ── NAV OVERRIDES ── */
-.page-nav{padding:1.1rem clamp(1.4rem,5vw,3rem)}
+.page-nav{padding:.75rem clamp(1.4rem,5vw,3rem)}
+.brand-mark{height:56px;overflow:hidden}
+.nav-links{justify-content:center;gap:2rem}
+.nav-links a{font-size:.83rem}
 
 /* ── SINAGOGA SLIDER ── */
 .sinagoga-slider{position:relative;width:100%;height:65vh;min-height:320px;overflow:hidden;background:#000}
@@ -279,7 +296,7 @@
     <span class="eyebrow-line"></span>
   </div>
   <h1 class="r2 reveal">
-    Bem-vindos ao<br><span class="accent">Chai Menachem</span>
+    <span class="hero-welcome-line">Bem-vindos ao</span><span class="accent">Chai Menachem</span>
   </h1>
   <div class="hero-line r3 reveal"></div>
   <p class="slogan r3 reveal">Onde cada alma encontra seu lar — um lar de Torá, luz e calor humano, no coração de São Paulo.</p>
@@ -301,6 +318,15 @@
     </a>
   </div>
 </section>
+
+<!-- HERO DIVIDER -->
+<div class="hero-divider">
+  <div class="hero-divider-inner">
+    <div class="hero-divider-line"></div>
+    <span class="hero-divider-star">✦ ✦ ✦</span>
+    <div class="hero-divider-line"></div>
+  </div>
+</div>
 
 <!-- SINAGOGA SLIDER -->
 <section class="sinagoga-slider" id="sinagoga-slider">
