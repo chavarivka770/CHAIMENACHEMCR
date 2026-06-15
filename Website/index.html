@@ -22,16 +22,16 @@
 .intro-skip:hover{border-color:var(--gold);color:var(--gold)}
 
 /* ── HERO ── */
-.home-hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem clamp(1.4rem,5vw,3rem) 6rem;gap:1.8rem;position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 50% 5%,rgba(255,238,160,.28) 0%,transparent 55%),radial-gradient(ellipse 32% 100% at 0% 50%,rgba(6,4,1,.48) 0%,transparent 65%),radial-gradient(ellipse 32% 100% at 100% 50%,rgba(6,4,1,.48) 0%,transparent 65%),linear-gradient(rgba(250,248,242,.54) 0%,rgba(238,224,198,.38) 45%,rgba(190,155,95,.82) 100%),url('WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg') center/cover no-repeat;}
+.home-hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem clamp(1.4rem,5vw,3rem) 6rem;gap:1.8rem;position:relative;overflow:hidden;background:radial-gradient(ellipse 58% 48% at 50% 42%,rgba(214,166,76,.22) 0%,rgba(214,166,76,.07) 38%,transparent 64%),radial-gradient(ellipse 135% 100% at 50% 50%,transparent 30%,rgba(8,5,3,.42) 78%,rgba(8,5,3,.66) 100%),linear-gradient(180deg,rgba(24,17,10,.74) 0%,rgba(28,20,12,.76) 48%,rgba(14,10,6,.90) 100%),url('WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg') center 32%/cover no-repeat;}
 .home-hero::before{content:'';position:absolute;top:0;left:-100%;width:200%;height:100%;background:linear-gradient(108deg,transparent 30%,rgba(255,250,220,.14) 47%,rgba(255,252,230,.22) 50%,rgba(255,250,220,.14) 53%,transparent 70%);animation:luxeSheen 14s ease-in-out 4s infinite;pointer-events:none;z-index:1}
 @keyframes luxeSheen{0%{transform:translateX(0);opacity:0}8%{opacity:1}50%{transform:translateX(75%);opacity:1}58%{opacity:0}100%{transform:translateX(75%);opacity:0}}
 .home-hero::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:80px;background:linear-gradient(to bottom,transparent,var(--gold));opacity:.5;z-index:1}
 .home-hero .eyebrow{justify-content:center;position:relative;z-index:1}
-.home-hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(3.2rem,10vw,7.5rem);line-height:1.02;letter-spacing:-.018em;color:var(--ink);max-width:15ch;position:relative;z-index:1;}
-.home-hero h1 .accent{font-style:italic;color:#B5841E;text-shadow:0 0 45px rgba(181,132,30,.55),0 0 90px rgba(181,132,30,.28),0 0 160px rgba(181,132,30,.13),0 1px 0 rgba(70,45,10,.30);animation:auraPulse 4s ease-in-out infinite alternate;}
-@keyframes auraPulse{from{text-shadow:0 0 30px rgba(181,132,30,.40),0 0 65px rgba(181,132,30,.20),0 0 120px rgba(181,132,30,.09),0 1px 0 rgba(70,45,10,.30)}to{text-shadow:0 0 60px rgba(181,132,30,.68),0 0 120px rgba(181,132,30,.38),0 0 200px rgba(181,132,30,.18),0 1px 0 rgba(70,45,10,.30)}}
+.home-hero h1{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(3.2rem,10vw,7.5rem);line-height:1.02;letter-spacing:-.018em;color:#F4E9D2;max-width:15ch;position:relative;z-index:1;}
+.home-hero h1 .accent{font-style:italic;color:#E7BE6E;text-shadow:0 0 50px rgba(231,190,110,.55),0 0 100px rgba(214,166,76,.32),0 0 180px rgba(214,166,76,.16),0 2px 6px rgba(0,0,0,.45);animation:auraPulse 4.5s ease-in-out infinite alternate;}
+@keyframes auraPulse{from{text-shadow:0 0 34px rgba(231,190,110,.42),0 0 72px rgba(214,166,76,.22),0 0 130px rgba(214,166,76,.10),0 2px 6px rgba(0,0,0,.45)}to{text-shadow:0 0 66px rgba(231,190,110,.72),0 0 132px rgba(214,166,76,.42),0 0 220px rgba(214,166,76,.20),0 2px 6px rgba(0,0,0,.45)}}
 .hero-line{width:60px;height:1px;background:var(--gold);margin:-.4rem auto 0;opacity:0;animation:fadeUp .8s var(--ease) 2.2s both}
-.slogan{font-size:clamp(1.05rem,1.7vw,1.3rem);color:var(--ink-soft);font-weight:300;line-height:1.7;max-width:44ch;position:relative;z-index:1}
+.slogan{font-size:clamp(1.05rem,1.7vw,1.3rem);color:rgba(246,240,228,.86);font-weight:300;line-height:1.7;max-width:44ch;position:relative;z-index:1;text-shadow:0 1px 12px rgba(0,0,0,.4)}
 .home-hero .cta-band{justify-content:center}
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .home-hero .r1{opacity:0;animation:fadeUp 1.2s var(--ease) 2.5s both}
@@ -57,7 +57,18 @@
 .pix-note{font-size:.78rem;color:var(--muted);margin-top:1.2rem;line-height:1.6}
 
 /* ── HERO WELCOME LINE ── */
-.hero-welcome-line{font-family:'Cormorant Garamond','Georgia',serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,3.2vw,2.6rem);color:var(--ink-soft);margin:0;letter-spacing:.06em;line-height:1.2;position:relative;z-index:1}
+.hero-welcome-line{font-family:'Cormorant Garamond','Georgia',serif;font-style:italic;font-weight:400;font-size:clamp(1.55rem,3.4vw,2.85rem);margin:0;letter-spacing:.05em;line-height:1.1;position:relative;z-index:1;display:inline-flex;align-items:center;gap:1.1rem;background:linear-gradient(180deg,#FAEFD2 0%,#E7C57F 55%,#D2A85A 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 14px rgba(0,0,0,.45))}
+.hero-welcome-line::before,.hero-welcome-line::after{content:'';width:clamp(26px,5vw,52px);height:1px;background:linear-gradient(90deg,transparent,rgba(214,166,76,.7));-webkit-text-fill-color:initial}
+.hero-welcome-line::after{background:linear-gradient(90deg,rgba(214,166,76,.7),transparent)}
+
+/* ── HERO CONTRAST OVERRIDES (text reads on the dark hero) ── */
+.home-hero .eyebrow-text{color:#E0C083}
+.home-hero .eyebrow-line{background:rgba(224,192,131,.75)}
+.home-hero .hero-line{background:linear-gradient(90deg,transparent,rgba(231,190,110,.9),transparent);width:80px}
+.home-hero .btn-ghost{border-color:rgba(231,190,110,.6);color:#EBCB8A;background:rgba(255,250,240,.05);backdrop-filter:blur(2px)}
+.home-hero .btn-ghost:hover{background:rgba(231,190,110,.14);border-color:rgba(231,190,110,.9);color:#FBEFD2}
+.home-hero .btn-pix{border-color:rgba(231,190,110,.6);color:#EBCB8A;background:rgba(255,250,240,.05);backdrop-filter:blur(2px)}
+.home-hero .btn-pix:hover{background:rgba(231,190,110,.14)}
 
 /* ── HERO DIVIDER ── */
 .hero-divider{background:var(--bg);padding:3.5rem clamp(1.4rem,5vw,3rem);display:flex;align-items:center;justify-content:center}
