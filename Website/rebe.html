@@ -1,166 +1,159 @@
-﻿<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>O Rebe — Chai Menachem</title>
-<link rel="icon" type="image/png" href="logo.png"/>
-<link rel="stylesheet" href="nova.css">
-<style>
-.rebe-page{max-width:720px;margin:0 auto;padding:4rem clamp(1.4rem,5vw,3rem) 6rem}
-.rebe-photo-wrap{margin-bottom:2.5rem;display:flex;justify-content:center}
-.rebe-photo-wrap img{max-width:100%;height:auto;display:block}
-.rebe-eyebrow{font-size:.62rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
-.rebe-title{font-family:'DM Serif Display',serif;font-size:2.8rem;color:var(--ink);line-height:1.05;margin-bottom:.3rem}
-.rebe-subtitle{font-size:.88rem;color:var(--muted);margin-bottom:2rem;letter-spacing:.04em}
-.rebe-text{font-size:.95rem;color:var(--ink-soft);line-height:1.9;margin-bottom:1.2rem;font-weight:300}
-.rebe-story{background:var(--bg-warm);border-left:3px solid var(--gold);padding:1.2rem 1.5rem;margin:1.6rem 0;font-size:.9rem;color:var(--ink-soft);line-height:1.85;font-style:italic}
-.rebe-story-title{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--gold);font-style:normal;display:block;margin-bottom:.5rem}
-.rebe-divider{display:flex;align-items:center;gap:1rem;margin:2.5rem 0}
-.rebe-divider-line{flex:1;height:1px;background:var(--line-2)}
-.rebe-divider-star{color:var(--gold);font-size:.75rem;opacity:.6}
-.rebe-cta-title{font-family:'DM Serif Display',serif;font-size:1.8rem;color:var(--ink);margin-bottom:.5rem}
-.rebe-cta-sub{font-size:.9rem;color:var(--ink-soft);line-height:1.75;margin-bottom:1.8rem}
-.btn-ohel{display:inline-flex;align-items:center;gap:.7rem;background:var(--gold);color:#fff;padding:1.1rem 2rem;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:background .25s;border:none;cursor:pointer}
-.btn-ohel:hover{background:var(--gold-2)}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#f5efe3;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#15243a;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  input::placeholder{color:rgba(245,239,227,0.4);}
+</style>
+</helmet>
 
-<!-- OVERLAY MENU -->
-<div class="nav-overlay" id="nav-overlay">
-  <button class="overlay-close" onclick="closeMenu()">✕</button>
-  <nav class="overlay-nav">
-    <a href="sobre.html">Sobre</a>
-    <a href="programas.html">Programas</a>
-    <a href="festas.html">Festas</a>
-    <a href="rezas.html">Rezas &amp; Horários</a>
-    <a href="aulas.html">Aulas</a>
-    <a href="espaco.html">Espaço</a>
-    <a href="eventos.html">Eventos</a>
-    <a href="kidush.html">Kidush</a>
-  </nav>
-  <p class="overlay-tag">Centro Chabad · Higienópolis · São Paulo</p>
-</div>
+<div style="max-width:100%;overflow-x:hidden;">
 
-<!-- HEADER -->
-<header class="page-nav">
-  <a class="brand" href="index.html">
-    <span class="brand-mark"><img src="logo-transparent.png" alt="Chai Menachem"></span>
-  </a>
-  <nav class="nav-links">
-    <a href="sobre.html">Sobre</a>
-    <a href="programas.html">Programas</a>
-    <a href="festas.html">Festas</a>
-    <a href="rezas.html">Rezas &amp; Horários</a>
-    <a href="aulas.html">Aulas</a>
-    <a href="kidush.html">Kidush</a>
-  </nav>
-  <div class="nav-right">
-    <a href="https://wa.me/5511991969797" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.6rem 1.1rem;font-size:.78rem">Fale Conosco</a>
-    <a href="https://instagram.com/chaimenachem" target="_blank" rel="noopener" class="ig-btn" title="@chaimenachem">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-    </a>
-    <button class="hamburger" id="hamburger" onclick="openMenu()"><span></span><span></span><span></span></button>
-  </div>
-</header>
+  <header style="position:sticky;top:0;z-index:50;background:rgba(245,239,227,0.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(21,36,58,0.10);">
+    <div style="max-width:1240px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="index.html" style="display:flex;align-items:center;gap:12px;">
+        <img src="assets/logo-chai.png" alt="Chai Menachem" style="height:40px;width:auto;display:block;">
+      </a>
+      <nav style="display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500;">
+        <a href="sobre.html" style="padding:4px 0;border-bottom:1.5px solid transparent;" style-hover="border-bottom:1.5px solid #b1873f;">Sobre</a>
+        <a href="rezas.html" style="padding:4px 0;border-bottom:1.5px solid transparent;" style-hover="border-bottom:1.5px solid #b1873f;">Rezas</a>
+        <a href="programas.html" style="padding:4px 0;border-bottom:1.5px solid transparent;" style-hover="border-bottom:1.5px solid #b1873f;">Programas</a>
+        <a href="aulas.html" style="padding:4px 0;border-bottom:1.5px solid transparent;" style-hover="border-bottom:1.5px solid #b1873f;">Aulas</a>
+        <a href="festas.html" style="padding:4px 0;border-bottom:1.5px solid transparent;" style-hover="border-bottom:1.5px solid #b1873f;">Festas</a>
+        <a href="eventos.html" style="padding:4px 0;border-bottom:1.5px solid transparent;" style-hover="border-bottom:1.5px solid #b1873f;">Eventos</a>
+        <a href="rebe.html" style="padding:4px 0;border-bottom:1.5px solid #b1873f;color:#8f6a2c;">O Rebe</a>
+      </nav>
+      <a href="index.html#doar" style="font-size:14.5px;font-weight:700;letter-spacing:0.02em;color:#fffdf8;background:#b1873f;padding:11px 22px;border-radius:999px;" style-hover="background:#8f6a2c;">Doar via PIX</a>
+    </div>
+  </header>
 
-<!-- BACK BUTTON -->
-<div style="max-width:var(--maxw);margin:0 auto;padding:.8rem clamp(1.4rem,5vw,3rem) 0">
-  <a href="index.html" onclick="if(history.length>1){event.preventDefault();history.back()}" style="display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;font-weight:500;letter-spacing:.04em;color:var(--muted);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-    Voltar
-  </a>
-</div>
-
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="eyebrow">
-    <span class="eyebrow-line"></span>
-    <span class="eyebrow-text">Nosso Líder Espiritual</span>
-    <span class="eyebrow-line"></span>
-  </div>
-  <h1>O<br><em>Rebe</em></h1>
-  <p style="font-size:1rem;color:var(--ink-soft);max-width:44ch;margin:.8rem auto 0;line-height:1.7">Rabino Menachem Mendel Schneerson · 1902–1994</p>
-</section>
-
-<div class="rebe-page">
-
-  <div class="rebe-photo-wrap reveal">
-    <picture>
-      <source srcset="Lubavitcher Rebbe (182) (1).avif" type="image/avif">
-      <img src="rebe.jpg" alt="O Rebe — Lubavitcher Rebbe">
-    </picture>
-  </div>
-
-  <p class="rebe-text reveal">O Lubavitcher Rebbe, Rabino Menachem Mendel Schneerson, foi o sétimo líder do movimento Chabad-Lubavitch e um dos maiores líderes espirituais do século XX. Nascido em Nikolaev, Ucrânia, em 18 de Nissan de 1902, era filho do Rav Levi Yitzchak Schneerson, renomado mestre da Torá.</p>
-
-  <p class="rebe-text reveal">Ainda jovem, o Rebe demonstrou um domínio extraordinário de toda a Torá — Talmud, Halachá, Cabalá e Chassidut. Estudou engenharia elétrica nas universidades de Berlim e Paris, não por necessidade, mas para poder conectar-se com o mundo moderno e trazer D'us para ele. Em 1951, após o falecimento do Rebbe anterior, Rabbi Yosef Yitzchak Schneerson, assumiu a liderança do Chabad-Lubavitch em Crown Heights, Brooklyn.</p>
-
-  <p class="rebe-text reveal">Sob sua liderança durante mais de quatro décadas, o Chabad cresceu de um pequeno movimento chassídico para uma presença mundial com emissários em mais de 100 países, incluindo o Brasil. O Rebe acreditava profundamente que cada Judeu — independentemente de seu nível de observância — possui uma chispa divina inextinguível. Ele enviava seus shluchim (emissários) para os lugares mais remotos do mundo, acendendo velas onde havia escuridão.</p>
-
-  <p class="rebe-text reveal">O Rebe faleceu em 3 de Tamuz de 5754 (1994), deixando um legado eterno. Seu túmulo, o Ohel em Queens, Nova York, recebe centenas de milhares de visitantes por ano. Pessoas de todo o mundo continuam escrevendo cartas ao Rebe — e relatam receber respostas em forma de bênçãos e milagres.</p>
-
-  <div class="rebe-story reveal">
-    <span class="rebe-story-title">✦ Os Dólares do Rebe</span>
-    Todo domingo, por décadas, o Rebe ficava em pé por seis, sete, às vezes oito horas — distribuindo um dólar a cada pessoa que passava, para ser doado à caridade. Cada pessoa recebia uma bênção pessoal, um olhar nos olhos, palavras que tocavam a alma. Presidentes, rabinos, crianças, pessoas simples — todos eram tratados com o mesmo amor. Dezenas de milhares passaram por ele. Nunca reclamou do cansaço. Dizia que eram os visitantes que lhe davam força.
-  </div>
-
-  <div class="rebe-story reveal">
-    <span class="rebe-story-title">✦ Nenhuma Alma é Pequena</span>
-    Um homem humilde foi visitar o Rebe e se desculpou, dizendo ser apenas uma pessoa simples, sem grande aprendizado. O Rebe olhou para ele com profundidade e respondeu: <em>"Cada Judeu possui uma neshamá — uma alma — que é uma parte literal de D'us. Não existe uma alma pequena."</em> O homem saiu transformado.
-  </div>
-
-  <div class="rebe-story reveal">
-    <span class="rebe-story-title">✦ A Criança e o Rebe</span>
-    Uma mãe trouxe seu filho de cinco anos para receber uma bênção. O menino estava com medo e começou a chorar. O Rebe se abaixou até o nível do garoto, olhou em seus olhos com ternura e sussurrou: <em>"Não tenha medo. D'us está sempre com você."</em> O menino parou de chorar imediatamente — e nunca esqueceu aquele olhar pelo resto de sua vida.
-  </div>
-
-  <div class="rebe-divider reveal"><div class="rebe-divider-line"></div><span class="rebe-divider-star">✦</span><div class="rebe-divider-line"></div></div>
-
-  <div class="reveal">
-    <h3 class="rebe-cta-title">Escreva pro Rebe</h3>
-    <p class="rebe-cta-sub">Junte-se a milhares de judeus ao redor do mundo que escrevem ao Rebe. Pelo site do Chabad.org você escreve diretamente pelo celular e sua carta vai ao Ohel — o túmulo sagrado do Rebe em Nova York.</p>
-    <a href="https://pt.chabad.org/tools/ohel_cdo/aid/1028237/jewish/Envie-uma-Carta.htm" target="_blank" rel="noopener" class="btn-ohel">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-      Escreva ao Rebe no Chabad.org
-    </a>
-  </div>
-
-</div>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">Chai Menachem</div>
-      <div class="footer-tagline">Centro Chabad · Higienópolis, São Paulo.<br>Um espaço de luz, aprendizado e comunidade.</div>
+  <!-- HERO -->
+  <section style="max-width:1240px;margin:0 auto;padding:72px 40px 20px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:60px;align-items:center;">
+    <div style="position:relative;">
+      <div style="position:absolute;inset:-12px -12px 12px 12px;border:1.5px solid rgba(177,135,63,0.45);border-radius:6px;z-index:0;"></div>
+      <img src="https://pevznerarie-ux.github.io/ChaiMenachem/Lubavitcher Rebbe (182) (1).avif" alt="O Rebe — Rabino Menachem Mendel Schneerson" style="position:relative;z-index:1;width:100%;height:520px;object-fit:cover;border-radius:6px;display:block;box-shadow:0 30px 60px -30px rgba(21,36,58,0.5);">
     </div>
     <div>
-      <div class="footer-col-title">Contato</div>
-      <a href="https://wa.me/5511991969797" target="_blank" rel="noopener" class="footer-link">+55 (11) 99196-9797</a>
-      <a href="mailto:chaimenachemadm@gmail.com" class="footer-link">chaimenachemadm@gmail.com</a>
-      <span class="footer-link" style="cursor:default">R. Cons. Brotero, 932 — Higienópolis</span>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+        <span style="width:30px;height:1.5px;background:#b1873f;display:inline-block;"></span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;">Nosso Líder Espiritual</span>
+      </div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:80px;line-height:0.98;letter-spacing:-0.01em;margin:0 0 10px;">O Rebe</h1>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:#8f6a2c;margin:0 0 26px;">Rabino Menachem Mendel Schneerson · 1902–1994</p>
+      <p style="font-size:17px;line-height:1.7;color:#2c3a4d;margin:0 0 18px;max-width:58ch;">O Lubavitcher Rebbe foi o sétimo líder do movimento Chabad-Lubavitch e um dos maiores líderes espirituais do século XX. Nascido em Nikolaev, Ucrânia, em 18 de Nissan de 1902, era filho do Rav Levi Yitzchak Schneerson, renomado mestre da Torá.</p>
+      <p style="font-size:17px;line-height:1.7;color:#44515f;margin:0;max-width:58ch;">Acreditava profundamente que cada Judeu — independentemente de seu nível de observância — possui uma chispa divina inextinguível, e enviou seus shluchim aos lugares mais remotos do mundo, acendendo velas onde havia escuridão.</p>
     </div>
-    <div>
-      <div class="footer-col-title">Redes Sociais</div>
-      <div style="display:flex;gap:1rem;margin-top:.5rem">
-        <a href="https://wa.me/5511991969797" target="_blank" rel="noopener" title="WhatsApp" style="color:var(--ink-soft);transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--ink-soft)'"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-        <a href="https://instagram.com/chaimenachem" target="_blank" rel="noopener" title="Instagram @chaimenachem" style="color:var(--ink-soft);transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--ink-soft)'"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+  </section>
+
+  <!-- BIO continuation -->
+  <section style="max-width:900px;margin:0 auto;padding:50px 40px 10px;">
+    <p style="font-size:18px;line-height:1.75;color:#2c3a4d;margin:0 0 22px;">Ainda jovem, o Rebe demonstrou um domínio extraordinário de toda a Torá — Talmud, Halachá, Cabalá e Chassidut. Estudou engenharia elétrica nas universidades de Berlim e Paris, não por necessidade, mas para conectar-se com o mundo moderno e trazer D'us para ele. Em 1951, assumiu a liderança do Chabad-Lubavitch em Crown Heights, Brooklyn.</p>
+    <p style="font-size:18px;line-height:1.75;color:#2c3a4d;margin:0;">Sob sua liderança por mais de quatro décadas, o Chabad cresceu de um pequeno movimento chassídico para uma presença mundial, com emissários em mais de 100 países. O Rebe faleceu em 3 de Tamuz de 5754 (1994), deixando um legado eterno — seu túmulo, o Ohel em Queens, recebe centenas de milhares de visitantes por ano.</p>
+  </section>
+
+  <!-- STORIES -->
+  <section style="background:#15243a;color:#f5efe3;margin-top:64px;">
+    <div style="max-width:1240px;margin:0 auto;padding:84px 40px;">
+      <div style="text-align:center;margin-bottom:50px;">
+        <div style="font-size:30px;color:#e9c987;margin-bottom:10px;">✦</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:50px;line-height:1;margin:0;color:#fffdf8;">Histórias do Rebe</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <div style="background:rgba(255,253,248,0.04);border:1px solid rgba(233,201,135,0.2);border-radius:12px;padding:34px;">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 16px;color:#e9c987;">Os Dólares do Rebe</h3>
+          <p style="font-size:15.5px;line-height:1.7;color:rgba(245,239,227,0.82);margin:0;">Todo domingo, por décadas, o Rebe ficava em pé por seis, sete, às vezes oito horas — distribuindo um dólar a cada pessoa para ser doado à caridade. Cada um recebia uma bênção pessoal e um olhar nos olhos. Presidentes, rabinos, crianças — todos tratados com o mesmo amor. Dizia que eram os visitantes que lhe davam força.</p>
+        </div>
+        <div style="background:rgba(255,253,248,0.04);border:1px solid rgba(233,201,135,0.2);border-radius:12px;padding:34px;">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 16px;color:#e9c987;">Nenhuma Alma é Pequena</h3>
+          <p style="font-size:15.5px;line-height:1.7;color:rgba(245,239,227,0.82);margin:0;">Um homem humilde visitou o Rebe e se desculpou por ser apenas uma pessoa simples, sem grande aprendizado. O Rebe olhou para ele com profundidade e respondeu: <span style="font-style:italic;color:#fffdf8;">"Cada Judeu possui uma neshamá que é uma parte literal de D'us. Não existe uma alma pequena."</span> O homem saiu transformado.</p>
+        </div>
+        <div style="background:rgba(255,253,248,0.04);border:1px solid rgba(233,201,135,0.2);border-radius:12px;padding:34px;">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 16px;color:#e9c987;">A Criança e o Rebe</h3>
+          <p style="font-size:15.5px;line-height:1.7;color:rgba(245,239,227,0.82);margin:0;">Uma mãe trouxe seu filho de cinco anos para receber uma bênção. O menino estava com medo e começou a chorar. O Rebe se abaixou até o nível do garoto, olhou em seus olhos com ternura e sussurrou: <span style="font-style:italic;color:#fffdf8;">"Não tenha medo. D'us está sempre com você."</span> O menino nunca esqueceu aquele olhar.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Chai Menachem Centro Chabad</span>
-    <span>Higienópolis · São Paulo</span>
-  </div>
-</footer>
+  </section>
 
-<script>
-function openMenu(){document.getElementById('nav-overlay').classList.add('open');document.getElementById('hamburger').classList.add('open')}
-function closeMenu(){document.getElementById('nav-overlay').classList.remove('open');document.getElementById('hamburger').classList.remove('open')}
-const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  <!-- ESCREVA PRO REBE -->
+  <section style="max-width:1240px;margin:0 auto;padding:84px 40px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <div>
+      <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:16px;">Conexão pessoal</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:52px;line-height:1.02;margin:0 0 18px;">Escreva pro Rebe</h2>
+      <p style="font-size:17.5px;line-height:1.65;color:#44515f;margin:0;max-width:44ch;">Deixe seu nome e número — entraremos em contato para marcar com o Rabino e ajudá-lo a enviar sua mensagem ao Ohel.</p>
+    </div>
+    <div style="background:#15243a;border-radius:14px;padding:36px;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <input value="{{ nome }}" onInput="{{ setNome }}" placeholder="Nome completo" style="font-family:inherit;font-size:16px;color:#fffdf8;background:rgba(255,253,248,0.06);border:1px solid rgba(233,201,135,0.25);border-radius:8px;padding:15px 18px;outline:none;" style-focus="border-color:#e9c987;">
+        <input value="{{ numero }}" onInput="{{ setNumero }}" placeholder="Número (WhatsApp)" style="font-family:inherit;font-size:16px;color:#fffdf8;background:rgba(255,253,248,0.06);border:1px solid rgba(233,201,135,0.25);border-radius:8px;padding:15px 18px;outline:none;" style-focus="border-color:#e9c987;">
+        <button onClick="{{ enviar }}" style="font-family:inherit;font-size:16px;font-weight:700;letter-spacing:0.02em;color:#15243a;background:#e9c987;border:0;border-radius:999px;padding:16px 0;cursor:pointer;margin-top:6px;" style-hover="background:#f2d9a3;">Enviar pelo WhatsApp</button>
+      </div>
+      <p style="font-size:13px;color:rgba(245,239,227,0.5);margin:16px 0 0;text-align:center;">Sua mensagem será enviada com segurança à equipe da Chai Menachem.</p>
+    </div>
+  </section>
+
+  <footer style="background:#101b2c;color:rgba(245,239,227,0.72);">
+    <div style="max-width:1240px;margin:0 auto;padding:64px 40px 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;">
+      <div>
+        <img src="assets/logo-chai.png" alt="Chai Menachem" style="height:44px;width:auto;margin-bottom:18px;filter:brightness(1.55);">
+        <p style="font-size:15px;line-height:1.6;max-width:34ch;margin:0;">Centro Chabad · Higienópolis, São Paulo. Um espaço de luz, aprendizado e comunidade.</p>
+      </div>
+      <div>
+        <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">Navegação</div>
+        <p style="font-size:15px;line-height:1.9;margin:0;">
+          <a href="sobre.html" style-hover="color:#fffdf8;">Sobre</a> · <a href="rezas.html" style-hover="color:#fffdf8;">Rezas</a> · <a href="programas.html" style-hover="color:#fffdf8;">Programas</a><br>
+          <a href="aulas.html" style-hover="color:#fffdf8;">Aulas</a> · <a href="festas.html" style-hover="color:#fffdf8;">Festas</a> · <a href="eventos.html" style-hover="color:#fffdf8;">Eventos</a><br>
+          <a href="kidush.html" style-hover="color:#fffdf8;">Kidush</a> · <a href="espaco.html" style-hover="color:#fffdf8;">Espaço</a> · <a href="rebe.html" style-hover="color:#fffdf8;">O Rebe</a>
+        </p>
+      </div>
+      <div>
+        <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">Contato</div>
+        <p style="font-size:15px;line-height:1.9;margin:0;">
+          <a href="https://wa.me/5511991969797" style-hover="color:#fffdf8;">+55 (11) 99196-9797</a><br>
+          <a href="mailto:chaimenachemadm@gmail.com" style-hover="color:#fffdf8;">chaimenachemadm@gmail.com</a><br>
+          R. Cons. Brotero, 932 — Higienópolis<br>
+          <a href="https://instagram.com/chaimenachem" style-hover="color:#fffdf8;">Instagram @chaimenachem</a>
+        </p>
+      </div>
+    </div>
+    <div style="max-width:1240px;margin:0 auto;padding:0 40px 40px;border-top:1px solid rgba(245,239,227,0.12);">
+      <p style="font-size:13px;color:rgba(245,239,227,0.45);margin:24px 0 0;">© 2026 Chai Menachem Centro Chabad Higienópolis · São Paulo</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { nome: '', numero: '' };
+  renderVals() {
+    return {
+      nome: this.state.nome,
+      numero: this.state.numero,
+      setNome: (e) => this.setState({ nome: e.target.value }),
+      setNumero: (e) => this.setState({ numero: e.target.value }),
+      enviar: () => {
+        const n = this.state.nome || '';
+        const tel = this.state.numero || '';
+        const msg = 'Olá! Meu nome é ' + n + ' (WhatsApp: ' + tel + '). Gostaria de escrever pro Rebe e marcar com o Rabino. 🙏';
+        window.open('https://wa.me/5511991969797?text=' + encodeURIComponent(msg), '_blank');
+      },
+    };
+  }
+}
 </script>
 </body>
 </html>
-
