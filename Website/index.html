@@ -89,9 +89,9 @@
   /* ===== mobile : titre doré animé, sous-titre sombre dessous ===== */
   @keyframes eyebrowShine{0%{background-position:0% 50%;}100%{background-position:-200% 50%;}}
   @media (max-width:920px){
-    .hero-sec{display:flex !important;flex-direction:column;align-items:center;text-align:center;}
+    .hero-sec{display:flex !important;flex-direction:column;align-items:center;text-align:center;gap:0 !important;}
     .hero-text{display:contents;}
-    .h-title{order:1;margin:0 0 12px !important;}
+    .h-title{order:1;margin:0 0 6px !important;}
     /* titre doré + reflet qui boucle (animation bien visible) */
     .h-title .word > span{
       background:linear-gradient(100deg,#a87f3c 0%,#8f6a2c 24%,#f3dca4 50%,#8f6a2c 76%,#a87f3c 100%);
@@ -100,7 +100,7 @@
       -webkit-text-fill-color:transparent;color:transparent;
       animation:wordRise 1s cubic-bezier(.16,.84,.44,1) forwards, eyebrowShine 5s linear infinite;
     }
-    .hero-eyebrow{order:2;justify-content:center;margin:0 0 26px !important;}
+    .hero-eyebrow{order:2;justify-content:center;margin:0 0 34px !important;}
     .hero-eyebrow .h-line{display:none !important;}
     .hero-eyebrow > span:last-child{
       font-size:11px !important;letter-spacing:0.26em !important;font-weight:600;color:#15243a !important;
