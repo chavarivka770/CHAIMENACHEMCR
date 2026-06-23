@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,6 +16,24 @@
   html,body{margin:0;padding:0;}
   body{background:#f5efe3;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#15243a;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none;}
+
+  /* ===== responsive-mobile-auto ===== */
+  @media (max-width:920px){
+    header > div{flex-wrap:wrap !important;padding-left:22px !important;padding-right:22px !important;gap:14px !important;}
+    header nav{order:3;width:100%;overflow-x:auto;gap:18px !important;font-size:14px !important;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;}
+    header nav::-webkit-scrollbar{display:none;}
+    header nav a{white-space:nowrap;flex:none;}
+    [style*="grid-template-columns"]{grid-template-columns:1fr !important;}
+    [style*="max-width:1240px"],[style*="max-width:1200px"],[style*="max-width:1100px"],[style*="max-width:1080px"],[style*="max-width:1000px"],[style*="max-width:980px"],[style*="max-width:960px"],[style*="max-width:920px"],[style*="max-width:900px"],[style*="max-width:860px"],[style*="max-width:820px"],[style*="max-width:800px"]{padding-left:22px !important;padding-right:22px !important;}
+    [style*="height:520px"],[style*="height:480px"],[style*="height:460px"],[style*="height:440px"],[style*="height:420px"],[style*="height:400px"]{height:340px !important;}
+    h1[style]{font-size:48px !important;}
+    h2[style]{font-size:36px !important;}
+  }
+  @media (max-width:560px){
+    h1[style]{font-size:38px !important;}
+    h2[style]{font-size:30px !important;}
+    [style*="height:520px"],[style*="height:480px"],[style*="height:460px"],[style*="height:440px"],[style*="height:420px"],[style*="height:400px"]{height:280px !important;}
+  }
 </style>
 </helmet>
 
@@ -44,40 +62,40 @@
     <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px;">
         <span style="width:30px;height:1.5px;background:#b1873f;display:inline-block;"></span>
-        <span style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;">Chai Menachem · Higienópolis</span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;">Chai Menachem Â· HigienÃ³polis</span>
       </div>
-      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:64px;line-height:1.02;letter-spacing:-0.01em;margin:0 0 22px;">Faça seu evento <span style="font-style:italic;color:#8f6a2c;">na Chai Menachem</span></h1>
-      <p style="font-size:18px;line-height:1.65;color:#44515f;margin:0 0 32px;max-width:48ch;">Nosso espaço está disponível para celebrar os momentos mais sagrados da sua vida — em família e em comunidade.</p>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:64px;line-height:1.02;letter-spacing:-0.01em;margin:0 0 22px;">FaÃ§a seu evento <span style="font-style:italic;color:#8f6a2c;">na Chai Menachem</span></h1>
+      <p style="font-size:18px;line-height:1.65;color:#44515f;margin:0 0 32px;max-width:48ch;">Nosso espaÃ§o estÃ¡ disponÃ­vel para celebrar os momentos mais sagrados da sua vida â€” em famÃ­lia e em comunidade.</p>
       <a href="https://wa.me/5511991969797?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20evento%20na%20Chai%20Menachem%20%F0%9F%A4%8D" style="font-size:15.5px;font-weight:700;color:#fffdf8;background:#b1873f;padding:15px 30px;border-radius:999px;display:inline-block;" style-hover="background:#8f6a2c;">Solicitar pelo WhatsApp</a>
     </div>
     <div style="position:relative;">
       <div style="position:absolute;inset:-12px -12px 12px 12px;border:1.5px solid rgba(177,135,63,0.45);border-radius:6px;z-index:0;"></div>
-      <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (3).jpeg" alt="Espaço Chai Menachem" style="position:relative;z-index:1;width:100%;height:440px;object-fit:cover;border-radius:6px;display:block;box-shadow:0 28px 56px -28px rgba(21,36,58,0.5);">
+      <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (3).jpeg" alt="EspaÃ§o Chai Menachem" style="position:relative;z-index:1;width:100%;height:440px;object-fit:cover;border-radius:6px;display:block;box-shadow:0 28px 56px -28px rgba(21,36,58,0.5);">
     </div>
   </section>
 
   <!-- EVENT TYPES -->
   <section style="max-width:1240px;margin:0 auto;padding:56px 40px 20px;">
-    <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:26px;">Ocasiões que celebramos</div>
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:26px;">OcasiÃµes que celebramos</div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;">
       <div style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:10px;padding:30px 20px;text-align:center;" style-hover="border-color:#b1873f;">
-        <div style="font-size:30px;margin-bottom:12px;">💍</div>
+        <div style="font-size:30px;margin-bottom:12px;">ðŸ’</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;">Casamento</div>
       </div>
       <div style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:10px;padding:30px 20px;text-align:center;" style-hover="border-color:#b1873f;">
-        <div style="font-size:30px;margin-bottom:12px;">👶</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;">Brit Milá</div>
+        <div style="font-size:30px;margin-bottom:12px;">ðŸ‘¶</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;">Brit MilÃ¡</div>
       </div>
       <div style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:10px;padding:30px 20px;text-align:center;" style-hover="border-color:#b1873f;">
-        <div style="font-size:30px;margin-bottom:12px;">📜</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;">Bat/Bar Mitzvá</div>
+        <div style="font-size:30px;margin-bottom:12px;">ðŸ“œ</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;">Bat/Bar MitzvÃ¡</div>
       </div>
       <div style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:10px;padding:30px 20px;text-align:center;" style-hover="border-color:#b1873f;">
-        <div style="font-size:30px;margin-bottom:12px;">💐</div>
+        <div style="font-size:30px;margin-bottom:12px;">ðŸ’</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;">Noivado</div>
       </div>
       <div style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:10px;padding:30px 20px;text-align:center;" style-hover="border-color:#b1873f;">
-        <div style="font-size:30px;margin-bottom:12px;">🎉</div>
+        <div style="font-size:30px;margin-bottom:12px;">ðŸŽ‰</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;">Aufruf</div>
       </div>
     </div>
@@ -87,7 +105,7 @@
   <section style="max-width:1240px;margin:0 auto;padding:54px 40px 90px;">
     <div style="background:#15243a;border-radius:14px;padding:60px;text-align:center;color:#f5efe3;">
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;line-height:1.08;margin:0 0 16px;color:#fffdf8;">Vamos planejar o seu evento juntos</h2>
-      <p style="font-size:17px;line-height:1.6;color:rgba(245,239,227,0.78);margin:0 auto 28px;max-width:52ch;">Conte-nos sobre a sua ocasião e nossa equipe cuidará de cada detalhe — com o calor e a atenção da comunidade Chai Menachem.</p>
+      <p style="font-size:17px;line-height:1.6;color:rgba(245,239,227,0.78);margin:0 auto 28px;max-width:52ch;">Conte-nos sobre a sua ocasiÃ£o e nossa equipe cuidarÃ¡ de cada detalhe â€” com o calor e a atenÃ§Ã£o da comunidade Chai Menachem.</p>
       <a href="https://wa.me/5511991969797?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20evento%20na%20Chai%20Menachem%20%F0%9F%A4%8D" style="font-size:15.5px;font-weight:700;color:#15243a;background:#e9c987;padding:16px 34px;border-radius:999px;display:inline-block;" style-hover="background:#f2d9a3;">Falar com a equipe</a>
     </div>
   </section>
@@ -96,14 +114,14 @@
     <div style="max-width:1240px;margin:0 auto;padding:64px 40px 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;">
       <div>
         <img src="assets/logo-chai.png" alt="Chai Menachem" style="height:44px;width:auto;margin-bottom:18px;filter:brightness(1.55);">
-        <p style="font-size:15px;line-height:1.6;max-width:34ch;margin:0;">Centro Chabad · Higienópolis, São Paulo. Um espaço de luz, aprendizado e comunidade.</p>
+        <p style="font-size:15px;line-height:1.6;max-width:34ch;margin:0;">Centro Chabad Â· HigienÃ³polis, SÃ£o Paulo. Um espaÃ§o de luz, aprendizado e comunidade.</p>
       </div>
       <div>
-        <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">Navegação</div>
+        <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">NavegaÃ§Ã£o</div>
         <p style="font-size:15px;line-height:1.9;margin:0;">
-          <a href="sobre.html" style-hover="color:#fffdf8;">Sobre</a> · <a href="rezas.html" style-hover="color:#fffdf8;">Rezas</a> · <a href="programas.html" style-hover="color:#fffdf8;">Programas</a><br>
-          <a href="aulas.html" style-hover="color:#fffdf8;">Aulas</a> · <a href="festas.html" style-hover="color:#fffdf8;">Festas</a> · <a href="eventos.html" style-hover="color:#fffdf8;">Eventos</a><br>
-          <a href="kidush.html" style-hover="color:#fffdf8;">Kidush</a> · <a href="espaco.html" style-hover="color:#fffdf8;">Espaço</a> · <a href="rebe.html" style-hover="color:#fffdf8;">O Rebe</a>
+          <a href="sobre.html" style-hover="color:#fffdf8;">Sobre</a> Â· <a href="rezas.html" style-hover="color:#fffdf8;">Rezas</a> Â· <a href="programas.html" style-hover="color:#fffdf8;">Programas</a><br>
+          <a href="aulas.html" style-hover="color:#fffdf8;">Aulas</a> Â· <a href="festas.html" style-hover="color:#fffdf8;">Festas</a> Â· <a href="eventos.html" style-hover="color:#fffdf8;">Eventos</a><br>
+          <a href="kidush.html" style-hover="color:#fffdf8;">Kidush</a> Â· <a href="espaco.html" style-hover="color:#fffdf8;">EspaÃ§o</a> Â· <a href="rebe.html" style-hover="color:#fffdf8;">O Rebe</a>
         </p>
       </div>
       <div>
@@ -111,13 +129,13 @@
         <p style="font-size:15px;line-height:1.9;margin:0;">
           <a href="https://wa.me/5511991969797" style-hover="color:#fffdf8;">+55 (11) 99196-9797</a><br>
           <a href="mailto:chaimenachemadm@gmail.com" style-hover="color:#fffdf8;">chaimenachemadm@gmail.com</a><br>
-          R. Cons. Brotero, 932 — Higienópolis<br>
+          R. Cons. Brotero, 932 â€” HigienÃ³polis<br>
           <a href="https://instagram.com/chaimenachem" style-hover="color:#fffdf8;">Instagram @chaimenachem</a>
         </p>
       </div>
     </div>
     <div style="max-width:1240px;margin:0 auto;padding:0 40px 40px;border-top:1px solid rgba(245,239,227,0.12);">
-      <p style="font-size:13px;color:rgba(245,239,227,0.45);margin:24px 0 0;">© 2026 Chai Menachem Centro Chabad Higienópolis · São Paulo</p>
+      <p style="font-size:13px;color:rgba(245,239,227,0.45);margin:24px 0 0;">Â© 2026 Chai Menachem Centro Chabad HigienÃ³polis Â· SÃ£o Paulo</p>
     </div>
   </footer>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,6 +16,24 @@
   html,body{margin:0;padding:0;}
   body{background:#f5efe3;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#15243a;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none;}
+
+  /* ===== responsive-mobile-auto ===== */
+  @media (max-width:920px){
+    header > div{flex-wrap:wrap !important;padding-left:22px !important;padding-right:22px !important;gap:14px !important;}
+    header nav{order:3;width:100%;overflow-x:auto;gap:18px !important;font-size:14px !important;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;}
+    header nav::-webkit-scrollbar{display:none;}
+    header nav a{white-space:nowrap;flex:none;}
+    [style*="grid-template-columns"]{grid-template-columns:1fr !important;}
+    [style*="max-width:1240px"],[style*="max-width:1200px"],[style*="max-width:1100px"],[style*="max-width:1080px"],[style*="max-width:1000px"],[style*="max-width:980px"],[style*="max-width:960px"],[style*="max-width:920px"],[style*="max-width:900px"],[style*="max-width:860px"],[style*="max-width:820px"],[style*="max-width:800px"]{padding-left:22px !important;padding-right:22px !important;}
+    [style*="height:520px"],[style*="height:480px"],[style*="height:460px"],[style*="height:440px"],[style*="height:420px"],[style*="height:400px"]{height:340px !important;}
+    h1[style]{font-size:48px !important;}
+    h2[style]{font-size:36px !important;}
+  }
+  @media (max-width:560px){
+    h1[style]{font-size:38px !important;}
+    h2[style]{font-size:30px !important;}
+    [style*="height:520px"],[style*="height:480px"],[style*="height:460px"],[style*="height:440px"],[style*="height:420px"],[style*="height:400px"]{height:280px !important;}
+  }
 </style>
 </helmet>
 
@@ -52,16 +70,16 @@
   <!-- INTRO + STATS -->
   <section style="max-width:1240px;margin:0 auto;padding:40px 40px 30px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;">
     <div>
-      <p style="font-size:19px;line-height:1.7;color:#2c3a4d;margin:0 0 22px;">O Chai Menachem é um Centro Comunitário afiliado ao movimento Chabad mundial, no coração de Higienópolis, São Paulo. Nossa missão é criar um espaço onde cada indivíduo — independentemente de seu nível de observância — possa vivenciar a riqueza, a profundidade e a alegria do Judaísmo.</p>
-      <p style="font-size:17px;line-height:1.7;color:#44515f;margin:0 0 34px;">Oferecemos uma vasta gama de programas educativos, eventos comunitários, serviços religiosos e recursos de aprendizado — tudo com o calor e a abertura que caracterizam a filosofia Chabad.</p>
+      <p style="font-size:19px;line-height:1.7;color:#2c3a4d;margin:0 0 22px;">O Chai Menachem Ã© um Centro ComunitÃ¡rio afiliado ao movimento Chabad mundial, no coraÃ§Ã£o de HigienÃ³polis, SÃ£o Paulo. Nossa missÃ£o Ã© criar um espaÃ§o onde cada indivÃ­duo â€” independentemente de seu nÃ­vel de observÃ¢ncia â€” possa vivenciar a riqueza, a profundidade e a alegria do JudaÃ­smo.</p>
+      <p style="font-size:17px;line-height:1.7;color:#44515f;margin:0 0 34px;">Oferecemos uma vasta gama de programas educativos, eventos comunitÃ¡rios, serviÃ§os religiosos e recursos de aprendizado â€” tudo com o calor e a abertura que caracterizam a filosofia Chabad.</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap;">
         <div style="flex:1;min-width:120px;border-top:2px solid #b1873f;padding-top:14px;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1;color:#15243a;">∞</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1;color:#15243a;">âˆž</div>
           <div style="font-size:13.5px;color:#44515f;margin-top:6px;">Portas abertas</div>
         </div>
         <div style="flex:1;min-width:120px;border-top:2px solid #b1873f;padding-top:14px;">
           <div style="font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1;color:#15243a;">SP</div>
-          <div style="font-size:13.5px;color:#44515f;margin-top:6px;">Higienópolis</div>
+          <div style="font-size:13.5px;color:#44515f;margin-top:6px;">HigienÃ³polis</div>
         </div>
         <div style="flex:1;min-width:120px;border-top:2px solid #b1873f;padding-top:14px;">
           <div style="font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1;color:#15243a;">932</div>
@@ -75,17 +93,17 @@
     </div>
   </section>
 
-  <!-- LIDERANÇA -->
+  <!-- LIDERANÃ‡A -->
   <section style="background:#15243a;color:#f5efe3;margin-top:50px;">
     <div style="max-width:1240px;margin:0 auto;padding:84px 40px;display:grid;grid-template-columns:0.8fr 1.2fr;gap:60px;align-items:center;">
       <div style="position:relative;">
         <img src="https://pevznerarie-ux.github.io/ChaiMenachem/rabino foto.jpg" alt="Rabino Belinow" style="width:100%;height:460px;object-fit:cover;border-radius:6px;display:block;box-shadow:0 30px 60px -30px rgba(0,0,0,0.6);">
       </div>
       <div>
-        <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">Liderança</div>
+        <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">LideranÃ§a</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:54px;line-height:1;margin:0 0 24px;color:#fffdf8;">Rabino <span style="font-style:italic;color:#e9c987;">Belinow</span></h2>
-        <p style="font-size:17px;line-height:1.7;color:rgba(245,239,227,0.82);margin:0 0 18px;max-width:56ch;">O Rabino Belinow nasceu em Milão, em uma família ligada aos valores da Torá e da tradição judaica. Desde jovem, dedicou-se aos estudos judaicos e à formação rabínica, desenvolvendo uma forte paixão pelo trabalho comunitário e pela missão de aproximar judeus de suas raízes.</p>
-        <p style="font-size:17px;line-height:1.7;color:rgba(245,239,227,0.82);margin:0 0 26px;max-width:56ch;">Casou-se com Chanie nos Estados Unidos e, juntos, decidiram dedicar suas vidas à shlichut do movimento Chabad-Lubavitch — vindo para o Brasil e estabelecendo-se em São Paulo para fortalecer a vida judaica da comunidade.</p>
+        <p style="font-size:17px;line-height:1.7;color:rgba(245,239,227,0.82);margin:0 0 18px;max-width:56ch;">O Rabino Belinow nasceu em MilÃ£o, em uma famÃ­lia ligada aos valores da TorÃ¡ e da tradiÃ§Ã£o judaica. Desde jovem, dedicou-se aos estudos judaicos e Ã  formaÃ§Ã£o rabÃ­nica, desenvolvendo uma forte paixÃ£o pelo trabalho comunitÃ¡rio e pela missÃ£o de aproximar judeus de suas raÃ­zes.</p>
+        <p style="font-size:17px;line-height:1.7;color:rgba(245,239,227,0.82);margin:0 0 26px;max-width:56ch;">Casou-se com Chanie nos Estados Unidos e, juntos, decidiram dedicar suas vidas Ã  shlichut do movimento Chabad-Lubavitch â€” vindo para o Brasil e estabelecendo-se em SÃ£o Paulo para fortalecer a vida judaica da comunidade.</p>
         <a href="https://wa.me/5511980808880" style="font-size:15px;font-weight:700;letter-spacing:0.02em;color:#15243a;background:#e9c987;padding:14px 28px;border-radius:999px;display:inline-block;" style-hover="background:#f2d9a3;">Fale com o Rabino</a>
       </div>
     </div>
@@ -93,24 +111,24 @@
 
   <!-- GALERIA -->
   <section style="max-width:1240px;margin:0 auto;padding:84px 40px;">
-    <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:14px;">Nosso Espaço</div>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:46px;line-height:1;margin:0 0 36px;">Conheça a Chai Menachem</h2>
+    <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:14px;">Nosso EspaÃ§o</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:46px;line-height:1;margin:0 0 36px;">ConheÃ§a a Chai Menachem</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
       <figure style="margin:0;">
-        <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="Salão de Rezas Masculino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
-        <figcaption style="font-size:13.5px;color:#44515f;margin-top:10px;letter-spacing:0.02em;">Salão de Rezas Masculino</figcaption>
+        <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="SalÃ£o de Rezas Masculino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
+        <figcaption style="font-size:13.5px;color:#44515f;margin-top:10px;letter-spacing:0.02em;">SalÃ£o de Rezas Masculino</figcaption>
       </figure>
       <figure style="margin:0;">
-        <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="Salão de Rezas Feminino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
-        <figcaption style="font-size:13.5px;color:#44515f;margin-top:10px;letter-spacing:0.02em;">Salão de Rezas Feminino</figcaption>
+        <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="SalÃ£o de Rezas Feminino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
+        <figcaption style="font-size:13.5px;color:#44515f;margin-top:10px;letter-spacing:0.02em;">SalÃ£o de Rezas Feminino</figcaption>
       </figure>
       <figure style="margin:0;">
         <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg" alt="Entrada" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
         <figcaption style="font-size:13.5px;color:#44515f;margin-top:10px;letter-spacing:0.02em;">Entrada</figcaption>
       </figure>
       <figure style="margin:0;">
-        <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="Bimá" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
-        <figcaption style="font-size:13.5px;color:#44515f;margin-top:10px;letter-spacing:0.02em;">Bimá</figcaption>
+        <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="BimÃ¡" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
+        <figcaption style="font-size:13.5px;color:#44515f;margin-top:10px;letter-spacing:0.02em;">BimÃ¡</figcaption>
       </figure>
       <figure style="margin:0;">
         <img src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (2).jpeg" alt="Sidurim" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
@@ -128,14 +146,14 @@
     <div style="max-width:1240px;margin:0 auto;padding:64px 40px 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;">
       <div>
         <img src="assets/logo-chai.png" alt="Chai Menachem" style="height:44px;width:auto;margin-bottom:18px;filter:brightness(1.55);">
-        <p style="font-size:15px;line-height:1.6;max-width:34ch;margin:0;">Centro Chabad · Higienópolis, São Paulo. Um espaço de luz, aprendizado e comunidade.</p>
+        <p style="font-size:15px;line-height:1.6;max-width:34ch;margin:0;">Centro Chabad Â· HigienÃ³polis, SÃ£o Paulo. Um espaÃ§o de luz, aprendizado e comunidade.</p>
       </div>
       <div>
-        <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">Navegação</div>
+        <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">NavegaÃ§Ã£o</div>
         <p style="font-size:15px;line-height:1.9;margin:0;">
-          <a href="sobre.html" style-hover="color:#fffdf8;">Sobre</a> · <a href="rezas.html" style-hover="color:#fffdf8;">Rezas</a> · <a href="programas.html" style-hover="color:#fffdf8;">Programas</a><br>
-          <a href="aulas.html" style-hover="color:#fffdf8;">Aulas</a> · <a href="festas.html" style-hover="color:#fffdf8;">Festas</a> · <a href="eventos.html" style-hover="color:#fffdf8;">Eventos</a><br>
-          <a href="kidush.html" style-hover="color:#fffdf8;">Kidush</a> · <a href="espaco.html" style-hover="color:#fffdf8;">Espaço</a> · <a href="rebe.html" style-hover="color:#fffdf8;">O Rebe</a>
+          <a href="sobre.html" style-hover="color:#fffdf8;">Sobre</a> Â· <a href="rezas.html" style-hover="color:#fffdf8;">Rezas</a> Â· <a href="programas.html" style-hover="color:#fffdf8;">Programas</a><br>
+          <a href="aulas.html" style-hover="color:#fffdf8;">Aulas</a> Â· <a href="festas.html" style-hover="color:#fffdf8;">Festas</a> Â· <a href="eventos.html" style-hover="color:#fffdf8;">Eventos</a><br>
+          <a href="kidush.html" style-hover="color:#fffdf8;">Kidush</a> Â· <a href="espaco.html" style-hover="color:#fffdf8;">EspaÃ§o</a> Â· <a href="rebe.html" style-hover="color:#fffdf8;">O Rebe</a>
         </p>
       </div>
       <div>
@@ -143,13 +161,13 @@
         <p style="font-size:15px;line-height:1.9;margin:0;">
           <a href="https://wa.me/5511991969797" style-hover="color:#fffdf8;">+55 (11) 99196-9797</a><br>
           <a href="mailto:chaimenachemadm@gmail.com" style-hover="color:#fffdf8;">chaimenachemadm@gmail.com</a><br>
-          R. Cons. Brotero, 932 — Higienópolis<br>
+          R. Cons. Brotero, 932 â€” HigienÃ³polis<br>
           <a href="https://instagram.com/chaimenachem" style-hover="color:#fffdf8;">Instagram @chaimenachem</a>
         </p>
       </div>
     </div>
     <div style="max-width:1240px;margin:0 auto;padding:0 40px 40px;border-top:1px solid rgba(245,239,227,0.12);">
-      <p style="font-size:13px;color:rgba(245,239,227,0.45);margin:24px 0 0;">© 2026 Chai Menachem Centro Chabad Higienópolis · São Paulo</p>
+      <p style="font-size:13px;color:rgba(245,239,227,0.45);margin:24px 0 0;">Â© 2026 Chai Menachem Centro Chabad HigienÃ³polis Â· SÃ£o Paulo</p>
     </div>
   </footer>
 
