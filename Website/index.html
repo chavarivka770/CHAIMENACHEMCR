@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -86,6 +86,16 @@
     .donate-grid{padding:28px 22px !important;}
     .hero-cta a{flex:1 1 auto;text-align:center;}
   }
+  /* ===== mobile : titre centré, galerie sous le titre, puis boutons ===== */
+  @media (max-width:920px){
+    .hero-sec{display:flex !important;flex-direction:column;align-items:center;text-align:center;}
+    .hero-text{display:contents;}
+    .hero-eyebrow{order:1;justify-content:center;margin-bottom:18px !important;}
+    .h-title{order:2;margin-bottom:22px !important;}
+    .hero-visual{order:3;width:100%;}
+    .hero-cta{order:4;justify-content:center;width:100%;margin-top:26px;}
+    .hero-desc{order:5;margin:22px 0 0 !important;max-width:48ch;}
+  }
 </style>
 </helmet>
 
@@ -114,83 +124,83 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero-sec" style="max-width:1240px;margin:0 auto;padding:78px 40px 64px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center;">
-    <div>
-      <div class="h-anim" style="display:flex;align-items:center;gap:10px;margin-bottom:26px;animation-delay:.05s;">
+    <div class="hero-text">
+      <div class="h-anim hero-eyebrow" style="display:flex;align-items:center;gap:10px;margin-bottom:26px;animation-delay:.05s;">
         <span class="h-line" style="height:1.5px;background:#b1873f;display:inline-block;"></span>
-        <span style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;">Centro Chabad Â· HigienÃ³polis</span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;">Centro Chabad · Higienópolis</span>
       </div>
       <h1 class="h-title"><span class="word w1"><span>Chai</span></span> <span class="word w2"><span>Menachem</span></span></h1>
-      <p class="h-anim" style="font-size:20px;line-height:1.55;color:#44515f;max-width:30ch;margin:0 0 38px;animation-delay:.32s;">Onde cada alma encontra seu lar â€” um lar de TorÃ¡, luz e calor humano, no coraÃ§Ã£o de SÃ£o Paulo.</p>
+      <p class="h-anim hero-desc" style="font-size:20px;line-height:1.55;color:#44515f;max-width:30ch;margin:0 0 38px;animation-delay:.32s;">Onde cada alma encontra seu lar — um lar de Torá, luz e calor humano, no coração de São Paulo.</p>
       <div class="h-anim hero-cta" style="display:flex;flex-wrap:wrap;gap:14px;animation-delay:.46s;">
         <a href="#doar" style="font-size:15.5px;font-weight:700;letter-spacing:0.02em;color:#fffdf8;background:#b1873f;padding:15px 30px;border-radius:999px;" style-hover="background:#8f6a2c;">Doar via PIX</a>
-        <a href="kidush.html" style="font-size:15.5px;font-weight:600;color:#15243a;background:transparent;border:1.5px solid rgba(21,36,58,0.22);padding:15px 30px;border-radius:999px;" style-hover="border-color:#15243a;">FaÃ§a seu Kidush conosco</a>
+        <a href="kidush.html" style="font-size:15.5px;font-weight:600;color:#15243a;background:transparent;border:1.5px solid rgba(21,36,58,0.22);padding:15px 30px;border-radius:999px;" style-hover="border-color:#15243a;">Faça seu Kidush conosco</a>
       </div>
     </div>
-    <div style="position:relative;">
+    <div class="hero-visual" style="position:relative;">
       <div class="h-frame" style="position:absolute;inset:-14px -14px 14px 14px;border:1.5px solid rgba(177,135,63,0.45);border-radius:6px;z-index:0;"></div>
       <div class="h-img hero-media" style="position:relative;z-index:1;width:100%;height:520px;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(21,36,58,0.5);">
         <img class="hero-slide is-active" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (3).jpeg" alt="Sinagoga Chai Menachem">
-        <img class="hero-slide" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="SalÃ£o Chai Menachem">
+        <img class="hero-slide" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="Salão Chai Menachem">
         <img class="hero-slide" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg" alt="Entrada Chai Menachem">
-        <img class="hero-slide" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="BimÃ¡ Chai Menachem">
+        <img class="hero-slide" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="Bimá Chai Menachem">
       </div>
     </div>
   </section>
 
-  <!-- ===== SHABAT BAR (rÃ©parÃ©) ===== -->
+  <!-- ===== SHABAT BAR (réparé) ===== -->
   <section style="background:#15243a;color:#f5efe3;">
     <div class="shabat-bar" style="max-width:1240px;margin:0 auto;padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;">
       <div style="display:flex;align-items:baseline;gap:16px;">
-        <span style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#e9c987;">×©Ö·××‘Ö¸Ö¼×ª ×§Ö¹×“Ö¶×©×</span>
-        <span style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(245,239,227,0.6);">HorÃ¡rios de Shabat Â· SÃ£o Paulo</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#e9c987;">שַׁבָּת קֹדֶשׁ</span>
+        <span style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(245,239,227,0.6);">Horários de Shabat · São Paulo</span>
       </div>
       <div style="display:flex;gap:44px;flex-wrap:wrap;">
         <div>
-          <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,239,227,0.6);margin-bottom:4px;">ðŸ•¯ Velas</div>
+          <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,239,227,0.6);margin-bottom:4px;">🕯 Velas</div>
           <div style="font-size:22px;font-weight:700;color:#fffdf8;">{{ candleTime }}</div>
         </div>
         <div>
-          <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,239,227,0.6);margin-bottom:4px;">âœ¨ Fim do Shabat</div>
+          <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,239,227,0.6);margin-bottom:4px;">✨ Fim do Shabat</div>
           <div style="font-size:22px;font-weight:700;color:#fffdf8;">{{ havdalaTime }}</div>
         </div>
         <div>
-          <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,239,227,0.6);margin-bottom:4px;">ðŸ“– ParashÃ¡</div>
+          <div style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,239,227,0.6);margin-bottom:4px;">📖 Parashá</div>
           <div style="font-size:22px;font-weight:700;color:#fffdf8;">{{ parasha }}</div>
         </div>
       </div>
-      <a href="rezas.html" style="font-size:14px;font-weight:600;color:#e9c987;border-bottom:1px solid rgba(233,201,135,0.5);padding-bottom:2px;">Ver todos os horÃ¡rios â†’</a>
+      <a href="rezas.html" style="font-size:14px;font-weight:600;color:#e9c987;border-bottom:1px solid rgba(233,201,135,0.5);padding-bottom:2px;">Ver todos os horários →</a>
     </div>
   </section>
 
-  <!-- ===== EXPLORE / IA condensÃ©e ===== -->
+  <!-- ===== EXPLORE / IA condensée ===== -->
   <section id="comunidade" class="sec-pad" style="max-width:1240px;margin:0 auto;padding:90px 40px 30px;">
     <div class="explore-head" style="display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:46px;">
       <div data-reveal>
         <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:14px;">Explore</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:52px;line-height:1.02;margin:0;color:#15243a;">Uma comunidade, muitos caminhos</h2>
       </div>
-      <p data-reveal data-reveal-delay="120" style="font-size:16px;line-height:1.6;color:#44515f;max-width:34ch;margin:0 0 6px;">Quatro pilares para viver a vida judaica em HigienÃ³polis â€” encontre o seu ponto de entrada.</p>
+      <p data-reveal data-reveal-delay="120" style="font-size:16px;line-height:1.6;color:#44515f;max-width:34ch;margin:0 0 6px;">Quatro pilares para viver a vida judaica em Higienópolis — encontre o seu ponto de entrada.</p>
     </div>
     <div class="grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
       <a data-reveal data-reveal-delay="0" href="sobre.html" style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:8px;padding:30px 26px 28px;display:block;min-height:230px;position:relative;" style-hover="border-color:#b1873f;transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(21,36,58,0.45);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#b1873f;line-height:1;margin-bottom:54px;">01</div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 10px;">Sobre nÃ³s</h3>
-        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">A histÃ³ria e a missÃ£o do Chai Menachem no coraÃ§Ã£o de HigienÃ³polis.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 10px;">Sobre nós</h3>
+        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">A história e a missão do Chai Menachem no coração de Higienópolis.</p>
       </a>
       <a id="vida" data-reveal data-reveal-delay="90" href="rezas.html" style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:8px;padding:30px 26px 28px;display:block;min-height:230px;position:relative;" style-hover="border-color:#b1873f;transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(21,36,58,0.45);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#b1873f;line-height:1;margin-bottom:54px;">02</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 10px;">Vida Judaica</h3>
-        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">Rezas, minianim, aulas de TorÃ¡, Talmud e Cabala para toda a famÃ­lia.</p>
+        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">Rezas, minianim, aulas de Torá, Talmud e Cabala para toda a família.</p>
       </a>
       <a id="eventos" data-reveal data-reveal-delay="180" href="festas.html" style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:8px;padding:30px 26px 28px;display:block;min-height:230px;position:relative;" style-hover="border-color:#b1873f;transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(21,36,58,0.45);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#b1873f;line-height:1;margin-bottom:54px;">03</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 10px;">Festas & Eventos</h3>
-        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">ChanucÃ¡, Purim, Pessach, Kidush e eventos com alegria e comunidade.</p>
+        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">Chanucá, Purim, Pessach, Kidush e eventos com alegria e comunidade.</p>
       </a>
       <a data-reveal data-reveal-delay="270" href="rebe.html" style="background:#fffdf8;border:1px solid rgba(21,36,58,0.10);border-radius:8px;padding:30px 26px 28px;display:block;min-height:230px;position:relative;" style-hover="border-color:#b1873f;transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(21,36,58,0.45);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#b1873f;line-height:1;margin-bottom:54px;">04</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:27px;margin:0 0 10px;">O Rebe</h3>
-        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">ConheÃ§a o Lubavitcher Rebbe, suas histÃ³rias e envie uma mensagem pessoal.</p>
+        <p style="font-size:14.5px;line-height:1.55;color:#44515f;margin:0;">Conheça o Lubavitcher Rebbe, suas histórias e envie uma mensagem pessoal.</p>
       </a>
     </div>
   </section>
@@ -198,40 +208,40 @@
   <!-- ===== O REBE (extrait, route vers page) ===== -->
   <section id="rebe" class="split-sec" style="max-width:1240px;margin:0 auto;padding:90px 40px;display:grid;grid-template-columns:0.85fr 1.15fr;gap:60px;align-items:center;">
     <div data-reveal data-reveal="img" style="position:relative;">
-      <img class="rebe-media" src="https://pevznerarie-ux.github.io/ChaiMenachem/rfgds_compressed.jpg" alt="O Rebe â€” Rabino Menachem Mendel Schneerson" style="width:100%;height:480px;object-fit:cover;border-radius:6px;display:block;box-shadow:0 30px 60px -30px rgba(21,36,58,0.5);">
+      <img class="rebe-media" src="https://pevznerarie-ux.github.io/ChaiMenachem/rfgds_compressed.jpg" alt="O Rebe — Rabino Menachem Mendel Schneerson" style="width:100%;height:480px;object-fit:cover;border-radius:6px;display:block;box-shadow:0 30px 60px -30px rgba(21,36,58,0.5);">
     </div>
     <div data-reveal data-reveal-delay="120">
-      <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:16px;">Nosso LÃ­der Espiritual</div>
+      <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:16px;">Nosso Líder Espiritual</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:56px;line-height:1;margin:0 0 8px;">O Rebe</h2>
-      <p style="font-size:16px;color:#44515f;margin:0 0 24px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:21px;">Rabino Menachem Mendel Schneerson Â· 1902â€“1994</p>
-      <p style="font-size:17px;line-height:1.65;color:#2c3a4d;margin:0 0 18px;max-width:54ch;">O sÃ©timo lÃ­der do movimento Chabad-Lubavitch e um dos maiores lÃ­deres espirituais do sÃ©culo XX. Acreditava que cada Judeu possui uma chispa divina inextinguÃ­vel â€” e enviou seus shluchim aos lugares mais remotos do mundo, acendendo velas onde havia escuridÃ£o.</p>
-      <blockquote style="border-left:2px solid #b1873f;padding-left:20px;margin:26px 0 30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.4;color:#15243a;max-width:48ch;">"Cada Judeu possui uma neshamÃ¡ que Ã© uma parte literal de D'us. NÃ£o existe uma alma pequena."</blockquote>
-      <a href="rebe.html" style="font-size:15px;font-weight:700;color:#8f6a2c;border-bottom:1.5px solid rgba(177,135,63,0.5);padding-bottom:3px;" style-hover="border-color:#8f6a2c;">Ler as histÃ³rias & escrever pro Rebe â†’</a>
+      <p style="font-size:16px;color:#44515f;margin:0 0 24px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:21px;">Rabino Menachem Mendel Schneerson · 1902–1994</p>
+      <p style="font-size:17px;line-height:1.65;color:#2c3a4d;margin:0 0 18px;max-width:54ch;">O sétimo líder do movimento Chabad-Lubavitch e um dos maiores líderes espirituais do século XX. Acreditava que cada Judeu possui uma chispa divina inextinguível — e enviou seus shluchim aos lugares mais remotos do mundo, acendendo velas onde havia escuridão.</p>
+      <blockquote style="border-left:2px solid #b1873f;padding-left:20px;margin:26px 0 30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.4;color:#15243a;max-width:48ch;">"Cada Judeu possui uma neshamá que é uma parte literal de D'us. Não existe uma alma pequena."</blockquote>
+      <a href="rebe.html" style="font-size:15px;font-weight:700;color:#8f6a2c;border-bottom:1.5px solid rgba(177,135,63,0.5);padding-bottom:3px;" style-hover="border-color:#8f6a2c;">Ler as histórias & escrever pro Rebe →</a>
     </div>
   </section>
 
-  <!-- ===== GALERIA homogÃ¨ne ===== -->
+  <!-- ===== GALERIA homogène ===== -->
   <section class="sec-pad" style="max-width:1240px;margin:0 auto;padding:0 40px 90px;">
-    <div data-reveal style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:14px;">Nosso EspaÃ§o</div>
+    <div data-reveal style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#8f6a2c;margin-bottom:14px;">Nosso Espaço</div>
     <h2 data-reveal data-reveal-delay="80" class="sec-title-xl" style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;line-height:1;margin:0 0 36px;">Um lar de luz e calor</h2>
     <div class="grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-      <img data-reveal data-reveal="img" data-reveal-delay="0" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="SalÃ£o Masculino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
-      <img data-reveal data-reveal="img" data-reveal-delay="90" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="SalÃ£o Feminino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
+      <img data-reveal data-reveal="img" data-reveal-delay="0" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (1).jpeg" alt="Salão Masculino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
+      <img data-reveal data-reveal="img" data-reveal-delay="90" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (2).jpeg" alt="Salão Feminino" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
       <img data-reveal data-reveal="img" data-reveal-delay="180" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (1).jpeg" alt="Entrada" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
-      <img data-reveal data-reveal="img" data-reveal-delay="60" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="BimÃ¡" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
+      <img data-reveal data-reveal="img" data-reveal-delay="60" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20.jpeg" alt="Bimá" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
       <img data-reveal data-reveal="img" data-reveal-delay="150" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.21 (2).jpeg" alt="Sidurim" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
       <img data-reveal data-reveal="img" data-reveal-delay="240" src="https://pevznerarie-ux.github.io/ChaiMenachem/WhatsApp Image 2026-05-19 at 10.27.20 (3).jpeg" alt="Netilat Yadaim" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;">
     </div>
   </section>
 
-  <!-- ===== DOAÃ‡ÃƒO premium ===== -->
+  <!-- ===== DOAÇÃO premium ===== -->
   <section id="doar" style="background:#15243a;color:#f5efe3;">
     <div class="split-sec donate-inner" style="max-width:1100px;margin:0 auto;padding:84px 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
       <div data-reveal>
-        <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#e9c987;margin-bottom:18px;">Doe para a Chai Menachem ðŸ’›</div>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:50px;line-height:1.02;margin:0 0 20px;color:#fffdf8;">Sua doaÃ§Ã£o mantÃ©m nossas portas sempre abertas</h2>
-        <p style="font-size:16.5px;line-height:1.6;color:rgba(245,239,227,0.78);margin:0 0 14px;max-width:46ch;">Cada contribuiÃ§Ã£o fortalece a vida judaica em HigienÃ³polis â€” aulas de TorÃ¡, refeiÃ§Ãµes de Shabat, e acolhimento para toda a comunidade.</p>
-        <p style="font-size:14px;color:rgba(245,239,227,0.55);margin:0;">Valores em mÃºltiplos de <span style="color:#e9c987;">Chai (18)</span> â€” o nÃºmero da vida.</p>
+        <div style="font-size:13px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#e9c987;margin-bottom:18px;">Doe para a Chai Menachem 💛</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:50px;line-height:1.02;margin:0 0 20px;color:#fffdf8;">Sua doação mantém nossas portas sempre abertas</h2>
+        <p style="font-size:16.5px;line-height:1.6;color:rgba(245,239,227,0.78);margin:0 0 14px;max-width:46ch;">Cada contribuição fortalece a vida judaica em Higienópolis — aulas de Torá, refeições de Shabat, e acolhimento para toda a comunidade.</p>
+        <p style="font-size:14px;color:rgba(245,239,227,0.55);margin:0;">Valores em múltiplos de <span style="color:#e9c987;">Chai (18)</span> — o número da vida.</p>
       </div>
       <div data-reveal data-reveal-delay="140" class="donate-grid" style="background:rgba(255,253,248,0.04);border:1px solid rgba(233,201,135,0.25);border-radius:12px;padding:32px;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;">
@@ -240,10 +250,10 @@
           <button onClick="{{ pick }}" data-v="540" style="font-family:inherit;font-size:18px;font-weight:700;color:#fffdf8;background:rgba(255,253,248,0.06);border:1.5px solid rgba(233,201,135,0.3);border-radius:8px;padding:16px 0;cursor:pointer;" style-hover="border-color:#e9c987;">R$ 540</button>
           <button onClick="{{ pick }}" data-v="1800" style="font-family:inherit;font-size:18px;font-weight:700;color:#fffdf8;background:rgba(255,253,248,0.06);border:1.5px solid rgba(233,201,135,0.3);border-radius:8px;padding:16px 0;cursor:pointer;" style-hover="border-color:#e9c987;">R$ 1.800</button>
         </div>
-        <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,227,0.55);margin-bottom:6px;">Chave PIX Â· CNPJ</div>
+        <div style="font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,227,0.55);margin-bottom:6px;">Chave PIX · CNPJ</div>
         <div style="font-family:'Hanken Grotesk';font-size:18px;font-weight:600;color:#fffdf8;letter-spacing:0.02em;margin-bottom:18px;">32.157.390/0001-02</div>
         <button onClick="{{ copyPix }}" style="width:100%;font-family:inherit;font-size:16px;font-weight:700;letter-spacing:0.02em;color:#15243a;background:#e9c987;border:0;border-radius:999px;padding:16px 0;cursor:pointer;" style-hover="background:#f2d9a3;">{{ copyLabel }}</button>
-        <p style="font-size:13.5px;line-height:1.5;color:rgba(245,239,227,0.6);margin:16px 0 0;text-align:center;">Chai Menachem Centro Chabad Â· Qualquer valor faz a diferenÃ§a. TodÃ¡ rabÃ¡! ðŸ™</p>
+        <p style="font-size:13.5px;line-height:1.5;color:rgba(245,239,227,0.6);margin:16px 0 0;text-align:center;">Chai Menachem Centro Chabad · Qualquer valor faz a diferença. Todá rabá! 🙏</p>
       </div>
     </div>
   </section>
@@ -253,14 +263,14 @@
     <div class="footer-grid" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;">
       <div>
         <img src="assets/logo-chai.png" alt="Chai Menachem" style="height:44px;width:auto;margin-bottom:18px;filter:brightness(1.55);">
-        <p style="font-size:15px;line-height:1.6;max-width:34ch;margin:0;">Centro Chabad Â· HigienÃ³polis, SÃ£o Paulo. Um espaÃ§o de luz, aprendizado e comunidade.</p>
+        <p style="font-size:15px;line-height:1.6;max-width:34ch;margin:0;">Centro Chabad · Higienópolis, São Paulo. Um espaço de luz, aprendizado e comunidade.</p>
       </div>
       <div>
         <div style="font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#e9c987;margin-bottom:16px;">Contato</div>
         <p style="font-size:15px;line-height:1.9;margin:0;">
           <a href="https://wa.me/5511991969797" style-hover="color:#fffdf8;">+55 (11) 99196-9797</a><br>
           <a href="mailto:chaimenachemadm@gmail.com" style-hover="color:#fffdf8;">chaimenachemadm@gmail.com</a><br>
-          R. Cons. Brotero, 932 â€” HigienÃ³polis
+          R. Cons. Brotero, 932 — Higienópolis
         </p>
       </div>
       <div>
@@ -276,7 +286,7 @@
       </div>
     </div>
     <div style="max-width:1240px;margin:0 auto;padding:0 40px 40px;border-top:1px solid rgba(245,239,227,0.12);">
-      <p style="font-size:13px;color:rgba(245,239,227,0.45);margin:24px 0 0;">Â© 2026 Chai Menachem Centro Chabad HigienÃ³polis Â· SÃ£o Paulo</p>
+      <p style="font-size:13px;color:rgba(245,239,227,0.45);margin:24px 0 0;">© 2026 Chai Menachem Centro Chabad Higienópolis · São Paulo</p>
     </div>
   </footer>
 
@@ -324,8 +334,8 @@ class Component extends DCLogic {
       havdalaTime: '19h09',
       parasha: 'Korach',
       copyLabel: this.state.copied
-        ? 'âœ“ Chave copiada!'
-        : (amt ? ('Copiar PIX Â· doar R$ ' + amt) : 'Copiar chave PIX (CNPJ)'),
+        ? '✓ Chave copiada!'
+        : (amt ? ('Copiar PIX · doar R$ ' + amt) : 'Copiar chave PIX (CNPJ)'),
       pick: (e) => {
         const v = e.currentTarget.getAttribute('data-v');
         this.setState({ amount: v });
